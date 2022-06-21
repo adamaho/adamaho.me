@@ -4,12 +4,12 @@
 
   export let as: string = "div";
 
-  export let atoms: Atoms;
+  export let atoms: Atoms | undefined = undefined;
 
   let className: string | undefined = undefined;
   export {className as class};
 </script>
 
-<svelte:element this={as} class={`${className} ${_atoms(atoms)}`} {...$$restProps}>
+<svelte:element this={as} class={`${className} ${atoms && _atoms(atoms)}`} {...$$restProps}>
   <slot />
 </svelte:element>

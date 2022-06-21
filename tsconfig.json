@@ -11,7 +11,9 @@
 		"strict": true,
 		"baseUrl": ".",
 		"paths": {
-			"~/*": ["src/*"]
+			"~/styles/*": ["src/styles/*"],
+			"~/components/*": ["src/components/*"],
+			"~/stores/*": ["src/stores/*"],
 		}
 	}
 }

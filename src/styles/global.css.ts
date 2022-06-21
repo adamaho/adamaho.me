@@ -4,7 +4,7 @@ import { baseVars } from './vars.css';
 export * from './vars.css';
 
 globalStyle('html', {
-	backgroundColor: `rgb(${baseVars.color.grey10})`
+	backgroundColor: `rgb(${baseVars.color.grey100})`
 });
 
 globalStyle('body', {
