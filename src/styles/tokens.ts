@@ -157,7 +157,8 @@ export const spacing = {
 	'9': '32px',
 	'10': '40px',
 	'11': '64px',
-	'12': '128px'
+	'12': '128px',
+	full: "100%"
 } as const;
 
 export type Spacing = keyof typeof spacing;

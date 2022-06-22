@@ -12,6 +12,7 @@ specifiers:
   '@vanilla-extract/sprinkles': ^1.4.1
   '@vanilla-extract/vite-plugin': ^3.2.1
   chroma-js: ^2.4.2
+  clsx: ^1.1.1
   eslint: ^8.16.0
   eslint-config-prettier: ^8.3.0
   eslint-plugin-svelte3: ^4.0.0
@@ -28,6 +29,7 @@ dependencies:
   '@vanilla-extract/css-utils': 0.1.2
   '@vanilla-extract/sprinkles': 1.4.1_@vanilla-extract+css@1.7.2
   chroma-js: 2.4.2
+  clsx: 1.1.1
 
 devDependencies:
   '@playwright/test': 1.22.2
@@ -633,6 +635,11 @@ packages:
 
   /chroma-js/2.4.2:
     resolution: {integrity: sha512-U9eDw6+wt7V8z5NncY2jJfZa+hUH8XEj8FQHgFJTrUFnJfXYf4Ml4adI2vXZOjqRDpFWtYVWypDfZwnJ+HIR4A==}
+    dev: false
+
+  /clsx/1.1.1:
+    resolution: {integrity: sha512-6/bPho624p3S2pMyvP5kKBPXnI3ufHLObBFCfgx+LkeR5lg2XYy2hqZqUf45ypD8COn2bhgGJSUE+l5dhNBieA==}
+    engines: {node: '>=6'}
     dev: false
 
   /code-point-at/1.1.0:

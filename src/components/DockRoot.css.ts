@@ -1,29 +1,31 @@
 import {style} from "@vanilla-extract/css";
+
 import {atoms} from "~/styles/atoms.css";
-import { baseVars } from "~/styles/vars.css";
+import {baseVars} from "~/styles/vars.css";
+import { darkMode, lightMode } from "~/styles/queries"; 
 
 export const dock = style([
   atoms({
     alignItems: "center",
+    backgroundOpacity: 60,
     borderRadius: "4",
     borderStyle: "solid",
     borderWidth: "1",
     display: "flex",
     gap: "4",
-    left: "0",
-    backgroundOpacity: 60,
     padding: "4",
-    position: "fixed",
-    top: "5"
+    position: "relative",
+    width: "full"
   }),
   {
     backdropFilter: "blur(3px)",
     selectors: {
-      [`html[data-theme='light'] &`]: {
-        backgroundColor: `rgb(${baseVars.color.grey10}, 0.6)`
+      [`${lightMode} &`]: {
+        borderColor: `rgb(${baseVars.color.grey20})`,
+        boxShadow: `0 -2px 3px rgb(${baseVars.color.grey20})`
       },
-      [`html[data-theme='dark'] &`]: {
-        backgroundColor: `rgb(${baseVars.color.grey100}, 0.6)`
+      [`${darkMode} &`]: {
+        borderColor: `rgb(${baseVars.color.grey90})`
       }
     }
   }

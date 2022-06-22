@@ -1,12 +1,13 @@
 <script lang="ts">
   import Box from "~/components/Box.svelte";
-
-  import * as styles from "./index.css";
+  import DockRoot from "~/components/DockRoot.svelte";
+  import DockItem from "~/components/DockItem.svelte";
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
-
-<Box class={styles.test} atoms={{ fontWeight: "extraBold", backgroundColor: "blue40" }}>
-  Hello
+<Box atoms={{ alignItems: "center", display: "flex", height: "full", justifyContent: "center" }}>
+  <DockRoot>
+    <DockItem />
+    <DockItem />
+    <DockItem />
+  </DockRoot>
 </Box>
