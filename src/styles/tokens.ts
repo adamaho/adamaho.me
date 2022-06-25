@@ -124,7 +124,8 @@ export type AnimationSpeed = keyof typeof animationSpeed;
 export const borderWidths = {
 	'0': '0px',
 	'1': '1px',
-	'2': '2px'
+	'2': '2px',
+	'3': '3px'
 } as const;
 
 export type BorderWidths = keyof typeof borderWidths;
@@ -156,9 +157,10 @@ export const spacing = {
 	'8': '28px',
 	'9': '32px',
 	'10': '40px',
-	'11': '64px',
-	'12': '128px',
-	full: "100%"
+	'11': '52px',
+	'12': '64px',
+	'13': '128px',
+	full: '100%'
 } as const;
 
 export type Spacing = keyof typeof spacing;

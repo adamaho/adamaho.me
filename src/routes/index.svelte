@@ -1,13 +1,16 @@
 <script lang="ts">
-  import Box from "~/components/Box.svelte";
-  import DockRoot from "~/components/DockRoot.svelte";
-  import DockItem from "~/components/DockItem.svelte";
+	import SlideToUnlock from '~/components/SlideToUnlock.svelte';
 </script>
 
-<Box atoms={{ alignItems: "center", display: "flex", height: "full", justifyContent: "center" }}>
-  <DockRoot>
-    <DockItem />
-    <DockItem />
-    <DockItem />
-  </DockRoot>
-</Box>
+<div class="center">
+	<SlideToUnlock on:unlock={() => console.log('unlocked')} />
+</div>
+
+<style>
+	.center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+</style>

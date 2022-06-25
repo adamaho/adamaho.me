@@ -14,11 +14,11 @@ globalStyle(darkMode, {
 
 globalStyle('body', {
 	fontFamily: baseVars.fontFamily.body,
-	height: "100vh",
+	height: '100vh',
 	margin: 0,
-	WebkitFontSmoothing: "antialiased"
+	WebkitFontSmoothing: 'antialiased'
 });
 
 globalStyle('*, *::after, *::before', {
-	boxSizing: "border-box"
+	boxSizing: 'border-box'
 });

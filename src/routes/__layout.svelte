@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { onMount } from "svelte";
+	import { onMount } from 'svelte';
 
-  import { theme } from "~/stores/theme";
-  
-  import "~/styles/global.css.ts";
+	import { theme } from '~/stores/theme';
 
-  onMount(() => {
-    // init the theme on mount
-    theme.initTheme();
-  });
+	import '~/styles/global.css.ts';
+
+	onMount(() => {
+		// init the theme on mount
+		theme.initTheme();
+	});
 </script>
 
 {#if $theme.hasInitialized}
-  <slot />
+	<slot />
 {/if}

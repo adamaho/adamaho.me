@@ -3,7 +3,16 @@ import { calc } from '@vanilla-extract/css-utils';
 import { createVar } from '@vanilla-extract/css';
 import type { StyleRule } from '@vanilla-extract/css';
 
-import { animationSpeed, borderWidths, colors, fontFamily, fontSizes, fontWeight, radii, spacing } from './tokens';
+import {
+	animationSpeed,
+	borderWidths,
+	colors,
+	fontFamily,
+	fontSizes,
+	fontWeight,
+	radii,
+	spacing
+} from './tokens';
 
 import { breakpoints } from './breakpoints';
 
@@ -66,9 +75,12 @@ const computeOpacityProperities = (property: keyof typeof opacityVars) => {
 
 const colorProperties = defineProperties({
 	properties: {
-		backgroundColor: {...computeColorProperties('backgroundColor', colors()), transparent: "transparent" },
+		backgroundColor: {
+			...computeColorProperties('backgroundColor', colors()),
+			transparent: 'transparent'
+		},
 		backgroundOpacity: computeOpacityProperities('backgroundColor'),
-		borderColor: {...computeColorProperties('borderColor', colors()), transparent: "transparent" },
+		borderColor: { ...computeColorProperties('borderColor', colors()), transparent: 'transparent' },
 		borderOpacity: computeOpacityProperities('borderColor'),
 		color: computeColorProperties('color', colors()),
 		colorOpacity: computeOpacityProperities('color')
@@ -235,7 +247,7 @@ const unresponsiveProperties = defineProperties({
 		pointerEvents: ['none'],
 		scrollMarginTop: spacing,
 		textTransform: ['capitalize', 'lowercase', 'uppercase'],
-		textDecoration: ["none"],
+		textDecoration: ['none'],
 		transitionProperty: {
 			none: 'none',
 			all: 'all',
