@@ -222,6 +222,9 @@ const responsiveProperties = defineProperties({
 			'borderBottomLeftRadius'
 		],
 		borderWidth: ['borderTopWidth', 'borderRightWidth', 'borderBottomWidth', 'borderLeftWidth'],
+		margin: ['marginTop', 'marginRight', 'marginBottom', 'marginLeft'],
+		marginX: ['marginLeft', 'marginRight'],
+		marginY: ['marginTop', 'marginBottom'],
 		padding: ['paddingTop', 'paddingRight', 'paddingBottom', 'paddingLeft'],
 		paddingX: ['paddingLeft', 'paddingRight'],
 		paddingY: ['paddingTop', 'paddingBottom']
