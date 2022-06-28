@@ -45,14 +45,13 @@
 	 * @param e PointerEvent
 	 */
 	function handlePointerUp() {
-		isActive = false;
-
-		if (shiftX < TRACK_WIDTH) {
+        
+        if (shiftX < TRACK_WIDTH) {
+            isActive = false;
 			shiftX = INITIAL_SHIFTX;
 		}
 
 		if (shiftX >= TRACK_WIDTH) {
-			shiftX = INITIAL_SHIFTX;
 			handleUnlockDispatch();
 		}
 
@@ -94,11 +93,8 @@
 	 * Handles the keyup event
 	 */
 	function handleKeyup(e: KeyboardEvent) {
-		isActive = false;
-
 		if (shiftX === TRACK_WIDTH) {
 			handleUnlockDispatch();
-			shiftX = INITIAL_SHIFTX;
 		}
 	}
 </script>
