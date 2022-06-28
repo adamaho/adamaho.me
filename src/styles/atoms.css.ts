@@ -80,7 +80,10 @@ const colorProperties = defineProperties({
 			transparent: 'transparent'
 		},
 		backgroundOpacity: computeOpacityProperities('backgroundColor'),
-		borderColor: { ...computeColorProperties('borderColor', colors()), transparent: 'transparent' },
+		borderColor: {
+			...computeColorProperties('borderColor', colors()),
+			transparent: 'transparent'
+		},
 		borderOpacity: computeOpacityProperities('borderColor'),
 		color: computeColorProperties('color', colors()),
 		colorOpacity: computeOpacityProperities('color')
@@ -166,7 +169,16 @@ const responsiveProperties = defineProperties({
 		borderBottomRightRadius: radii,
 		borderBottomLeftRadius: radii,
 		bottom: { ...spacing, ...negativeSpace },
-		display: ['block', 'flex', 'grid', 'inline', 'inline-flex', 'inline-block', 'none', 'contents'],
+		display: [
+			'block',
+			'flex',
+			'grid',
+			'inline',
+			'inline-flex',
+			'inline-block',
+			'none',
+			'contents'
+		],
 		flex: {
 			1: '1 1 0%',
 			auto: '1 1 auto',

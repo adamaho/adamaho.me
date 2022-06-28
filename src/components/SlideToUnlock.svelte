@@ -8,7 +8,7 @@
 	import * as styles from './SlideToUnlock.css';
 
 	enum KeyCodes {
-		U = "u"
+		U = 'u'
 	}
 
 	const dispatch = createEventDispatcher();
@@ -22,9 +22,9 @@
 
 	/**
 	 * Handles dispatching the unlock event
-	*/
+	 */
 	function handleUnlockDispatch() {
-		dispatch("unlock");
+		dispatch('unlock');
 	}
 
 	/**
@@ -36,7 +36,7 @@
 		initialContactPointX = e.x;
 
 		if (browser) {
-			document.body.style.overflow = "hidden"
+			document.body.style.overflow = 'hidden';
 		}
 	}
 
@@ -57,7 +57,7 @@
 		}
 
 		if (browser) {
-			document.body.style.overflow = "";
+			document.body.style.overflow = '';
 		}
 	}
 
@@ -87,21 +87,28 @@
 		if ((e.metaKey || e.ctrlKey) && e.key === KeyCodes.U) {
 			isActive = true;
 			shiftX = TRACK_WIDTH;
-			handleUnlockDispatch();
 		}
 	}
 
 	/**
 	 * Handles the keyup event
-	*/
+	 */
 	function handleKeyup(e: KeyboardEvent) {
 		isActive = false;
-		shiftX = INITIAL_SHIFTX;
-	}
 
+		if (shiftX === TRACK_WIDTH) {
+			handleUnlockDispatch();
+			shiftX = INITIAL_SHIFTX;
+		}
+	}
 </script>
 
-<svelte:window on:pointermove={handlePointerMove} on:pointerup={handlePointerUp} on:keydown={handleKeydown} on:keyup={handleKeyup} />
+<svelte:window
+	on:pointermove={handlePointerMove}
+	on:pointerup={handlePointerUp}
+	on:keydown={handleKeydown}
+	on:keyup={handleKeyup}
+/>
 
 <div class={cx(styles.slideToUnlockTrack, { [styles.slideToUnlockTrackActive]: isActive })}>
 	<button

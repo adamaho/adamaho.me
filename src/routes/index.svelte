@@ -1,11 +1,9 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	import ShortcutKey from '~/components/ShortcutKey.svelte';
 	import SlideToUnlock from '~/components/SlideToUnlock.svelte';
-	import Text from "~/components/Text.svelte";
+	import Text from '~/components/Text.svelte';
 
-	import * as styles from "./index.css";
+	import * as styles from './index.css';
 </script>
 
 <svelte:body style:overflow="hidden" />
