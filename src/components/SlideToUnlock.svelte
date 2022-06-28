@@ -1,9 +1,7 @@
 <script lang="ts">
-	import { browser } from '$app/env';
+    import cx from 'clsx';
 
-	import cx from 'clsx';
-
-	import { createEventDispatcher } from 'svelte';
+	import { onMount, createEventDispatcher, onDestroy } from 'svelte';
 
 	import * as styles from './SlideToUnlock.css';
 
@@ -20,6 +18,14 @@
 	let shiftX = INITIAL_SHIFTX;
 	let isActive = false;
 
+    onMount(() => {
+        document.body.style.touchAction = "none";
+    });
+
+    onDestroy(() => {
+        document.body.style.touchAction = "";
+    });
+
 	/**
 	 * Handles dispatching the unlock event
 	 */
@@ -35,17 +41,14 @@
 		isActive = true;
 		initialContactPointX = e.x;
 
-		if (browser) {
-			document.body.style.overflow = 'hidden';
-		}
+        document.body.style.overflow = 'hidden';
 	}
 
 	/**
 	 * Handles the pointer up event
 	 * @param e PointerEvent
 	 */
-	function handlePointerUp() {
-        
+	function handlePointerUp(e: PointerEvent) {
         if (shiftX < TRACK_WIDTH) {
             isActive = false;
 			shiftX = INITIAL_SHIFTX;
@@ -55,9 +58,7 @@
 			handleUnlockDispatch();
 		}
 
-		if (browser) {
-			document.body.style.overflow = '';
-		}
+        document.body.style.overflow = '';
 	}
 
 	/**
@@ -92,14 +93,14 @@
 	/**
 	 * Handles the keyup event
 	 */
-	function handleKeyup(e: KeyboardEvent) {
+	function handleKeyup() {
 		if (shiftX === TRACK_WIDTH) {
 			handleUnlockDispatch();
 		}
 	}
 </script>
 
-<svelte:window
+<svelte:body
 	on:pointermove={handlePointerMove}
 	on:pointerup={handlePointerUp}
 	on:keydown={handleKeydown}
