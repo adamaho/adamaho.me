@@ -64,18 +64,22 @@ export const slideToUnlockTrackActive = style([
 	}
 ]);
 
-export const slideToUnlockThumbActive = style({});
+export const slideToUnlockThumbActive = style({
+    transform: "scale(1.1)"
+});
 
 export const slideToUnlockThumb = style([
 	atoms({
 		borderWidth: '0',
 		height: '10',
 		width: '11',
-		position: 'absolute'
+		position: 'absolute',
+        transitionDuration: "fast",
+        transitionProperty: "transform",
+        transitionTimingFunction: "ease"
 	}),
 	{
 		borderRadius: '7px',
-		transformOrigin: 'left',
 		userSelect: 'none',
 		WebkitUserSelect: 'none',
 		selectors: {
