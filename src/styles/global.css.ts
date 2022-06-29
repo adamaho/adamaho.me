@@ -12,9 +12,14 @@ globalStyle(darkMode, {
 	backgroundColor: `rgb(${baseVars.color.grey100})`
 });
 
+globalStyle("html", {
+    height: "-webkit-fill-available"
+});
+
 globalStyle('body', {
 	fontFamily: baseVars.fontFamily.body,
-	height: '100vh',
+    minHeight: "100vh",
+    height: "100%",
 	margin: 0,
 	WebkitFontSmoothing: 'antialiased'
 });

@@ -1,6 +1,37 @@
-import { style } from '@vanilla-extract/css';
+import { style, keyframes } from '@vanilla-extract/css';
 import { atoms } from '~/styles/atoms.css';
 import { breakpoints } from '~/styles/queries';
+import { baseVars } from '~/styles/vars.css';
+
+const flyUp = keyframes({
+    "0%": {
+        opacity: "1",
+        transform: "translateY(0px)"
+    },
+    "50%": {
+        opacity: "1",
+        transform: "translateY(10px)"
+    },
+    "100%": {
+        opacity: "0",
+        transform: "translateY(-50px)"
+    }
+});
+
+const flyDown = keyframes({
+    "0%": {
+        opacity: "1",
+        transform: "translateY(0px)"
+    },
+    "50%": {
+        opacity: "1",
+        transform: "translateY(-10px)"
+    },
+    "100%": {
+        opacity: "0",
+        transform: "translateY(50px)"
+    }
+});
 
 export const welcome = style([
 	atoms({
@@ -14,6 +45,13 @@ export const welcome = style([
 		paddingBottom: '13'
 	})
 ]);
+
+export const welomeHeadingOut = style({
+    animationName: flyUp,
+    animationDuration: baseVars.animationSpeed.medium,
+    animationFillMode: "forwards",
+    animationTimingFunction: "ease-out"
+});
 
 export const welcomeHeading = style([
 	atoms({
@@ -36,6 +74,13 @@ export const welcomeUnlock = style([
 		width: 'full'
 	})
 ]);
+
+export const welomeUnlockOut = style({
+    animationName: flyDown,
+    animationDuration: baseVars.animationSpeed.medium,
+    animationFillMode: "forwards",
+    animationTimingFunction: "ease-out"
+});
 
 export const shortcut = style([
 	atoms({

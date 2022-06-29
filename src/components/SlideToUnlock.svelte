@@ -6,7 +6,7 @@
 	import * as styles from './SlideToUnlock.css';
 
 	enum KeyCodes {
-		U = 'u'
+		Enter = 'Enter'
 	}
 
 	const dispatch = createEventDispatcher();
@@ -84,7 +84,7 @@
 	 * @param e
 	 */
 	function handleKeydown(e: KeyboardEvent) {
-		if ((e.metaKey || e.ctrlKey) && e.key === KeyCodes.U) {
+		if ((e.metaKey || e.ctrlKey) && e.key === KeyCodes.Enter) {
 			isActive = true;
 			shiftX = TRACK_WIDTH;
 		}

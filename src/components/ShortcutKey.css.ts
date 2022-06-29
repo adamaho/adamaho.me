@@ -10,9 +10,9 @@ export const keyboardKey = style([
 		display: 'flex',
 		fontFamily: 'body',
 		fontSize: '4',
-		height: '10',
 		justifyContent: 'center',
-		width: '10'
+        paddingX: "4",
+        paddingY: "4",
 	}),
 	{
 		selectors: {
