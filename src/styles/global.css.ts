@@ -12,8 +12,8 @@ globalStyle(darkMode, {
 	backgroundColor: `rgb(${baseVars.color.grey100})`
 });
 
-globalStyle("html", {
-    height: "-webkit-fill-available"
+globalStyle('html', {
+	height: '-webkit-fill-available'
 });
 
 globalStyle('body', {

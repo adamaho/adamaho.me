@@ -1,5 +1,5 @@
 <script lang="ts">
-    import cx from 'clsx';
+	import cx from 'clsx';
 
 	import { onMount, createEventDispatcher, onDestroy } from 'svelte';
 
@@ -18,13 +18,13 @@
 	let shiftX = INITIAL_SHIFTX;
 	let isActive = false;
 
-    onMount(() => {
-        document.body.style.touchAction = "none";
-    });
+	onMount(() => {
+		document.body.style.touchAction = 'none';
+	});
 
-    onDestroy(() => {
-        document.body.style.touchAction = "";
-    });
+	onDestroy(() => {
+		document.body.style.touchAction = '';
+	});
 
 	/**
 	 * Handles dispatching the unlock event
@@ -41,7 +41,7 @@
 		isActive = true;
 		initialContactPointX = e.x;
 
-        document.body.style.overflow = 'hidden';
+		document.body.style.overflow = 'hidden';
 	}
 
 	/**
@@ -49,8 +49,8 @@
 	 * @param e PointerEvent
 	 */
 	function handlePointerUp(e: PointerEvent) {
-        if (shiftX < TRACK_WIDTH) {
-            isActive = false;
+		if (shiftX < TRACK_WIDTH) {
+			isActive = false;
 			shiftX = INITIAL_SHIFTX;
 		}
 
@@ -58,7 +58,7 @@
 			handleUnlockDispatch();
 		}
 
-        document.body.style.overflow = '';
+		document.body.style.overflow = '';
 	}
 
 	/**
@@ -104,8 +104,7 @@
 	on:pointermove={handlePointerMove}
 	on:pointerup={handlePointerUp}
 	on:keydown={handleKeydown}
-	on:keyup={handleKeyup}
-/>
+	on:keyup={handleKeyup} />
 
 <div class={cx(styles.slideToUnlockTrack, { [styles.slideToUnlockTrackActive]: isActive })}>
 	<button
@@ -114,7 +113,4 @@
 		aria-label="slide to unlock or press command/control + u"
 		style={`left: ${shiftX}px;`}
 	/>
-	<span class={cx(styles.slideToUnlockText, { [styles.slideToUnlockTextActive]: isActive })}>
-		slide to enter
-	</span>
 </div>

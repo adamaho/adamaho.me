@@ -9,17 +9,20 @@ export const keyboardKey = style([
 		borderRadius: '2',
 		display: 'flex',
 		fontFamily: 'body',
-		fontSize: '4',
+		fontSize: '3',
 		justifyContent: 'center',
-        paddingX: "4",
-        paddingY: "4",
+		paddingX: '4',
+		paddingY: '3'
 	}),
 	{
 		selectors: {
-			[`${lightMode} &`]: {},
+			[`${lightMode} &`]: {
+                backgroundColor: `rgb(${baseVars.color.grey30})`,
+                color: `rgb(${baseVars.color.grey80})`
+            },
 			[`${darkMode} &`]: {
-				backgroundColor: `rgb(${baseVars.color.grey90})`,
-				color: `rgb(${baseVars.color.grey40})`
+                backgroundColor: `rgb(${baseVars.color.grey90})`,
+                color: `rgb(${baseVars.color.grey40})`
 			}
 		}
 	}

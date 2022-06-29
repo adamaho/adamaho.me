@@ -41,7 +41,8 @@ export const slideToUnlockTrack = style([
 		width: '100%',
 		selectors: {
 			[`${lightMode} &`]: {
-				background: `linear-gradient(to right, rgb(${baseVars.color.grey20}), rgb(${baseVars.color.grey10}))`
+				background: `linear-gradient(to right, rgb(${baseVars.color.grey30}), rgb(${baseVars.color.grey10}))`,
+                boxShadow: `0 0 0 3px rgba(${baseVars.color.grey30}, 0.6)`
 			},
 			[`${darkMode} &`]: {
 				background: `linear-gradient(to right, rgb(${baseVars.color.grey90}), rgb(${baseVars.color.grey100}))`,
@@ -55,7 +56,8 @@ export const slideToUnlockTrackActive = style([
 	{
 		selectors: {
 			[`${lightMode} &`]: {
-				background: `linear-gradient(to right, rgb(${baseVars.color.grey20}), rgb(${baseVars.color.grey10}))`
+				background: `linear-gradient(to right, rgb(${baseVars.color.grey20}), rgb(${baseVars.color.grey10}))`,
+                boxShadow: `0 0 0 3px rgba(${baseVars.color.blue40}, 0.6)`
 			},
 			[`${darkMode} &`]: {
 				boxShadow: `0 0 0 3px rgba(${baseVars.color.blue40}, 0.6)`
@@ -65,7 +67,7 @@ export const slideToUnlockTrackActive = style([
 ]);
 
 export const slideToUnlockThumbActive = style({
-    transform: "scale(1.1)"
+	transform: 'scale(1.1)',
 });
 
 export const slideToUnlockThumb = style([
@@ -74,18 +76,20 @@ export const slideToUnlockThumb = style([
 		height: '10',
 		width: '11',
 		position: 'absolute',
-        transitionDuration: "fast",
-        transitionProperty: "transform",
-        transitionTimingFunction: "ease"
+		transitionDuration: 'fast',
+		transitionProperty: 'transform',
+		transitionTimingFunction: 'ease'
 	}),
 	{
-		borderRadius: '7px',
+		borderRadius: '9px',
 		userSelect: 'none',
 		WebkitUserSelect: 'none',
 		selectors: {
-			[`${lightMode} &`]: {},
+			[`${lightMode} &`]: {
+                backgroundColor: `rgb(${baseVars.color.grey90})`
+            },
 			[`${darkMode} &`]: {
-				backgroundColor: `rgb(${baseVars.color.grey40})`
+				backgroundColor: `rgb(${baseVars.color.grey10})`
 			},
 			[`&:not(${slideToUnlockThumbActive})`]: {
 				animationDelay: '5s',
@@ -97,27 +101,3 @@ export const slideToUnlockThumb = style([
 		}
 	}
 ]);
-
-export const slideToUnlockText = style([
-	atoms({
-		fontSize: '4',
-		fontWeight: 'bold',
-		marginRight: '11',
-		transitionDuration: 'fast',
-		transitionTimingFunction: 'ease',
-		transitionProperty: 'opacity'
-	}),
-	{
-		opacity: 1,
-		selectors: {
-			[`${lightMode} &`]: {},
-			[`${darkMode} &`]: {
-				color: `rgb(${baseVars.color.grey40})`
-			}
-		}
-	}
-]);
-
-export const slideToUnlockTextActive = style({
-	opacity: 0
-});

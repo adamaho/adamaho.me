@@ -4,33 +4,33 @@ import { breakpoints } from '~/styles/queries';
 import { baseVars } from '~/styles/vars.css';
 
 const flyUp = keyframes({
-    "0%": {
-        opacity: "1",
-        transform: "translateY(0px)"
-    },
-    "50%": {
-        opacity: "1",
-        transform: "translateY(10px)"
-    },
-    "100%": {
-        opacity: "0",
-        transform: "translateY(-50px)"
-    }
+	'0%': {
+		opacity: '1',
+		transform: 'translateY(0px)'
+	},
+	'50%': {
+		opacity: '1',
+		transform: 'translateY(10px)'
+	},
+	'100%': {
+		opacity: '0',
+		transform: 'translateY(-50px)'
+	}
 });
 
 const flyDown = keyframes({
-    "0%": {
-        opacity: "1",
-        transform: "translateY(0px)"
-    },
-    "50%": {
-        opacity: "1",
-        transform: "translateY(-10px)"
-    },
-    "100%": {
-        opacity: "0",
-        transform: "translateY(50px)"
-    }
+	'0%': {
+		opacity: '1',
+		transform: 'translateY(0px)'
+	},
+	'50%': {
+		opacity: '1',
+		transform: 'translateY(-10px)'
+	},
+	'100%': {
+		opacity: '0',
+		transform: 'translateY(50px)'
+	}
 });
 
 export const welcome = style([
@@ -44,16 +44,16 @@ export const welcome = style([
 		paddingTop: '12',
 		paddingBottom: '13'
 	}),
-    {
-        minHeight: "100vh"
-    }
+	{
+		minHeight: '100vh'
+	}
 ]);
 
 export const welomeHeadingOut = style({
-    animationName: flyUp,
-    animationDuration: baseVars.animationSpeed.medium,
-    animationFillMode: "forwards",
-    animationTimingFunction: "ease-out"
+	animationName: flyUp,
+	animationDuration: baseVars.animationSpeed.medium,
+	animationFillMode: 'forwards',
+	animationTimingFunction: 'ease-out'
 });
 
 export const welcomeHeading = style([
@@ -79,10 +79,10 @@ export const welcomeUnlock = style([
 ]);
 
 export const welomeUnlockOut = style({
-    animationName: flyDown,
-    animationDuration: baseVars.animationSpeed.medium,
-    animationFillMode: "forwards",
-    animationTimingFunction: "ease-out"
+	animationName: flyDown,
+	animationDuration: baseVars.animationSpeed.medium,
+	animationFillMode: 'forwards',
+	animationTimingFunction: 'ease-out'
 });
 
 export const shortcut = style([

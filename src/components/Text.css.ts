@@ -1,7 +1,7 @@
 import { style, styleVariants } from '@vanilla-extract/css';
 import { atoms } from '~/styles/atoms.css';
 import { baseVars } from '~/styles/vars.css';
-import { darkMode, lightMode, breakpoints } from '~/styles/queries';
+import { darkMode, lightMode } from '~/styles/queries';
 
 const baseText = style([
 	atoms({
@@ -22,46 +22,49 @@ export const text = styleVariants(
 	{
 		h1: {
 			...headingBase,
+            fontSize: baseVars.fontSizes[8],
 			selectors: {
-				[`${lightMode} &`]: {},
+				[`${lightMode} &`]: {
+                    color: `rgb(${baseVars.color.grey100})`,
+                },
 				[`${darkMode} &`]: {
-					color: `rgb(${baseVars.color.grey40})`,
-					fontSize: baseVars.fontSizes[9]
-				}
+                    color: `rgb(${baseVars.color.grey10})`,
+                }
 			},
-			'@media': {
-				[breakpoints.md]: {
-					fontSize: baseVars.fontSizes[9]
-				}
-			}
 		},
 		h2: {
 			...headingBase,
+            fontSize: baseVars.fontSizes[7],
 			selectors: {
-				[`${lightMode} &`]: {},
+				[`${lightMode} &`]: {
+                    color: `rgb(${baseVars.color.grey100})`,
+                },
 				[`${darkMode} &`]: {
-					color: `rgb(${baseVars.color.grey40})`
+					color: `rgb(${baseVars.color.grey10})`,
 				}
 			},
-			'@media': {
-				[breakpoints.md]: {
-					fontSize: baseVars.fontSizes[7]
-				}
-			}
 		},
-		span: {
+        p: {
+            fontSize: baseVars.fontSizes[3],
 			selectors: {
-				[`${lightMode} &`]: {},
+				[`${lightMode} &`]: {
+                    color: `rgb(${baseVars.color.grey70})`,
+                },
 				[`${darkMode} &`]: {
 					color: `rgb(${baseVars.color.grey50})`,
-					fontSize: baseVars.fontSizes[4]
 				}
 			},
-			'@media': {
-				[breakpoints.md]: {
-					fontSize: baseVars.fontSizes[9]
+		},
+		span: {
+            fontSize: baseVars.fontSizes[3],
+			selectors: {
+				[`${lightMode} &`]: {
+                    color: `rgb(${baseVars.color.grey70})`,
+                },
+				[`${darkMode} &`]: {
+					color: `rgb(${baseVars.color.grey50})`,
 				}
-			}
+			},
 		}
 	},
 	(variant) => [baseText, style(variant)]
