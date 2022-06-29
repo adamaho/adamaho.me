@@ -56,7 +56,6 @@ export const slideToUnlockTrackActive = style([
 	{
 		selectors: {
 			[`${lightMode} &`]: {
-				background: `linear-gradient(to right, rgb(${baseVars.color.grey20}), rgb(${baseVars.color.grey10}))`,
                 boxShadow: `0 0 0 3px rgba(${baseVars.color.blue40}, 0.6)`
 			},
 			[`${darkMode} &`]: {

@@ -88,10 +88,10 @@ export const welomeUnlockOut = style({
 export const shortcut = style([
 	atoms({
 		alignItems: 'center',
-		display: 'none',
 		gap: '4'
 	}),
 	{
+        display: "none",
 		'@media': {
 			[breakpoints.sm]: {
 				display: 'flex'

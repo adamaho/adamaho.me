@@ -44,6 +44,18 @@ export const text = styleVariants(
 				}
 			},
 		},
+        h3: {
+			...headingBase,
+            fontSize: baseVars.fontSizes[6],
+			selectors: {
+				[`${lightMode} &`]: {
+                    color: `rgb(${baseVars.color.grey100})`,
+                },
+				[`${darkMode} &`]: {
+					color: `rgb(${baseVars.color.grey10})`,
+				}
+			},
+		},
         p: {
             fontSize: baseVars.fontSizes[3],
 			selectors: {
