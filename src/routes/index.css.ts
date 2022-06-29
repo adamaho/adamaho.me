@@ -43,7 +43,10 @@ export const welcome = style([
 		gap: '12',
 		paddingTop: '12',
 		paddingBottom: '13'
-	})
+	}),
+    {
+        minHeight: "100vh"
+    }
 ]);
 
 export const welomeHeadingOut = style({

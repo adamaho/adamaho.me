@@ -3,6 +3,7 @@
 
 	import { theme } from '~/stores/theme';
 
+    import '~/styles/global.css';
 	import '~/styles/global.css.ts';
 
 	onMount(() => {

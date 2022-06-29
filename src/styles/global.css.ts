@@ -18,8 +18,6 @@ globalStyle("html", {
 
 globalStyle('body', {
 	fontFamily: baseVars.fontFamily.body,
-    minHeight: "100vh",
-    height: "100%",
 	margin: 0,
 	WebkitFontSmoothing: 'antialiased'
 });
