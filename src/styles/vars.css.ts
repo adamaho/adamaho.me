@@ -71,7 +71,7 @@ createGlobalTheme('html[data-theme="dark"]', theme, {
 			default: `rgb(${baseVars.color.grey10})`
 		},
         text: {
-            default: `rgb(${baseVars.color.grey30})`
+            default: `rgb(${baseVars.color.grey40})`
         }
 	}
 });

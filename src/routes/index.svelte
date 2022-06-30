@@ -21,10 +21,10 @@
 	</div>
 	<div class="welcome-unlock" class:welcome-unlock-out={isUnlocked}>
 		<SlideToUnlock on:unlock={handleUnlock} />
-		<!-- <div class={styles.shortcut}>
+		<div class="shortcuts">
 			<ShortcutKey />
 			<ShortcutKey>enter</ShortcutKey>
-		</div> -->
+		</div>
 	</div>
 </div>
 
@@ -61,7 +61,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        gap: var(--aho-space-small);
+        gap: var(--aho-space-xxsmall);
         width: 100%;
     }
 
@@ -101,5 +101,18 @@
         animation-duration: var(--aho-animation-speed-medium);
         animation-fill-mode: forwards;
         animation-timing-function: ease-out;
+    }
+
+    .shortcuts {
+        align-items: center;
+        display: none;
+        justify-content: center;
+        gap: var(--aho-space-small);
+    }
+
+    @media screen and (min-width: 640px) {
+        .shortcuts {
+            display: flex;
+        }
     }
 </style>
