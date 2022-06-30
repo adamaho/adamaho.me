@@ -51,9 +51,9 @@ export const theme = createGlobalThemeContract(
 			heading: {
 				default: ''
 			},
-            text: {
-                default: ''
-            }
+			text: {
+				default: ''
+			}
 		}
 	},
 	(_value, path) => `aho-${path.join('-')}`.replace(/[A-Z]/g, (m) => '-' + m.toLowerCase())
@@ -70,9 +70,9 @@ createGlobalTheme('html[data-theme="dark"]', theme, {
 		heading: {
 			default: `rgb(${baseVars.color.grey10})`
 		},
-        text: {
-            default: `rgb(${baseVars.color.grey40})`
-        }
+		text: {
+			default: `rgb(${baseVars.color.grey40})`
+		}
 	}
 });
 
@@ -87,8 +87,8 @@ createGlobalTheme('html[data-theme="light"]', theme, {
 		heading: {
 			default: `rgb(${baseVars.color.grey100})`
 		},
-        text: {
-            default: `rgb(${baseVars.color.grey80})`
-        }
+		text: {
+			default: `rgb(${baseVars.color.grey80})`
+		}
 	}
 });

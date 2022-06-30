@@ -22,9 +22,9 @@
 	}
 
 	body {
-        color: var(--aho-colors-text-default);
+		color: var(--aho-colors-text-default);
 		font-family: var(--aho-font-family-body);
-        font-size: var(--aho-font-size-medium);
+		font-size: var(--aho-font-size-medium);
 		margin: 0;
 		min-height: 100vh;
 		min-height: -webkit-fill-available;
@@ -56,10 +56,11 @@
 	h6 {
 		color: var(--aho-colors-heading-default);
 		font-weight: var(--aho-font-weight-extra-bold);
-        line-height: 1;
+		line-height: 1;
 	}
 
-    p, span {
-        color: var(--aho-colors-text-default);
-    }
+	p,
+	span {
+		color: var(--aho-colors-text-default);
+	}
 </style>
