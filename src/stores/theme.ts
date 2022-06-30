@@ -45,7 +45,7 @@ function createThemeStore() {
 
 			if (localStorageTheme) {
 				setTheme(localStorageTheme);
-                return;
+				return;
 			}
 
 			// check the match media for the prefered theme

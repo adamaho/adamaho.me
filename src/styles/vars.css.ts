@@ -6,9 +6,9 @@ import {
 	radii,
 	borderWidths,
 	scale,
-	spacing,
+	space,
 	fontFamily,
-	fontSizes,
+	fontSize,
 	fontWeight
 } from './tokens';
 
@@ -18,13 +18,13 @@ export const baseVars = createGlobalThemeContract(
 		borderWidths,
 		color: colors(),
 		fontFamily,
-		fontSizes,
+		fontSize,
 		fontWeight,
 		radii,
 		scale,
-		spacing
+		space
 	},
-	(_value, path) => `aho-${path.join('-')}`
+	(_value, path) => `aho-${path.join('-')}`.replace(/[A-Z]/g, (m) => '-' + m.toLowerCase())
 );
 
 createGlobalTheme(':root', baseVars, {
@@ -32,9 +32,63 @@ createGlobalTheme(':root', baseVars, {
 	borderWidths,
 	color: colors(),
 	fontFamily,
-	fontSizes,
+	fontSize,
 	fontWeight,
 	radii,
 	scale,
-	spacing
+	space
+});
+
+export const theme = createGlobalThemeContract(
+	{
+		colors: {
+			brand: {
+				primary: ''
+			},
+			background: {
+				site: ''
+			},
+			heading: {
+				default: ''
+			},
+            text: {
+                default: ''
+            }
+		}
+	},
+	(_value, path) => `aho-${path.join('-')}`.replace(/[A-Z]/g, (m) => '-' + m.toLowerCase())
+);
+
+createGlobalTheme('html[data-theme="dark"]', theme, {
+	colors: {
+		brand: {
+			primary: `rgb(${baseVars.color.blue40})`
+		},
+		background: {
+			site: `rgb(${baseVars.color.grey100})`
+		},
+		heading: {
+			default: `rgb(${baseVars.color.grey10})`
+		},
+        text: {
+            default: `rgb(${baseVars.color.grey30})`
+        }
+	}
+});
+
+createGlobalTheme('html[data-theme="light"]', theme, {
+	colors: {
+		brand: {
+			primary: `rgb(${baseVars.color.blue40})`
+		},
+		background: {
+			site: `rgb(${baseVars.color.grey10})`
+		},
+		heading: {
+			default: `rgb(${baseVars.color.grey100})`
+		},
+        text: {
+            default: `rgb(${baseVars.color.grey80})`
+        }
+	}
 });

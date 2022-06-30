@@ -1,6 +1,6 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import { onMount } from 'svelte';
-	import * as styles from './ShortcutKey.css';
+	// import * as styles from './ShortcutKey.css';
 
 	let isMacOS = false;
 
@@ -17,4 +17,4 @@
 			⌃
 		{/if}
 	</slot>
-</kbd>
+</kbd> -->

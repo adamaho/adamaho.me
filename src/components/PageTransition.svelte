@@ -1,4 +1,4 @@
-<script lang="ts">
+<!-- <script lang="ts">
 	import cx from 'clsx';
 
 	import { fly } from 'svelte/transition';
@@ -17,4 +17,4 @@
 	>
 		<slot />
 	</div>
-{/key}
+{/key} -->

@@ -132,34 +132,34 @@ export type BorderWidths = keyof typeof borderWidths;
 
 export const radii = {
 	'0': '0px',
-	'1': '3px',
-	'2': '6px',
-	'3': '12px',
-	'4': '14px',
-	'5': '16px',
-	'6': '20px',
-	'7': '24px',
+	xsmall: '3px',
+	small: '6px',
+	smedium: '12px',
+	medium: '14px',
+	large: '16px',
+	xlarge: '20px',
+	'2xlarge': '24px',
 	round: '9999px'
 } as const;
 
 export type Radii = keyof typeof radii;
 
-export const spacing = {
+export const space = {
 	'0': '0px',
 	px: '1px',
-	'1': '2px',
-	'2': '4px',
-	'3': '8px',
-	'4': '12px',
-	'5': '16px',
-	'6': '20px',
-	'7': '24px',
-	'8': '28px',
-	'9': '32px',
-	'10': '40px',
-	'11': '52px',
-	'12': '64px',
-	'13': '128px',
+	xxsmall: '2px',
+	xsmall: '4px',
+	small: '8px',
+	smedium: '12px',
+	medium: '16px',
+	large: '20px',
+	xlarge: '24px',
+	'2xlarge': '28px',
+	'3xlarge': '32px',
+	'4xlarge': '40px',
+	'5xlarge': '52px',
+	'6xlarge': '64px',
+	'7xlarge': '128px',
 	full: '100%'
 } as const;
 
@@ -176,25 +176,25 @@ export const scale = {
 
 export type Scale = keyof typeof scale;
 
-export const fontSizes = {
-	'1': '11px',
-	'2': '14px',
-	'3': '16px',
-	'4': '20px',
-	'5': '24px',
-	'6': '26px',
-	'7': '32px',
-	'8': '40px',
-	'9': '52px'
+export const fontSize = {
+	small: '11px',
+	smedium: '14px',
+	medium: '16px',
+	large: '20px',
+	xlarge: '24px',
+	'2xlarge': '26px',
+	'3xlarge': '32px',
+	'4xlarge': '40px',
+	'5xlarge': '52px'
 } as const;
 
-export type FontSizes = keyof typeof fontSizes;
+export type FontSize = keyof typeof fontSize;
 
 export const fontFamily = {
 	body: "'Nunito', sans-serif"
 } as const;
 
-export type FontFamily = keyof typeof fontSizes;
+export type FontFamily = keyof typeof fontFamily;
 
 export const fontWeight = {
 	normal: '500',
@@ -202,4 +202,4 @@ export const fontWeight = {
 	extraBold: '900'
 } as const;
 
-export type FontWeight = keyof typeof fontSizes;
+export type FontWeight = keyof typeof fontWeight;
