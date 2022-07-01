@@ -121,14 +121,14 @@ export const animationSpeed = {
 
 export type AnimationSpeed = keyof typeof animationSpeed;
 
-export const borderWidths = {
+export const borderWidth = {
 	'0': '0px',
 	'1': '1px',
 	'2': '2px',
 	'3': '3px'
 } as const;
 
-export type BorderWidths = keyof typeof borderWidths;
+export type BorderWidth = keyof typeof borderWidth;
 
 export const radii = {
 	'0': '0px',

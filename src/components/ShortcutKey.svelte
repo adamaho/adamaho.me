@@ -8,7 +8,7 @@
 	});
 </script>
 
-<kbd class="shortcut-key">
+<kbd class="shortcut-key" on:click>
 	<slot>
 		{#if isMacOS}
 			⌘

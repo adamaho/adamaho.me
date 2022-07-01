@@ -4,7 +4,7 @@ import {
 	animationSpeed,
 	colors,
 	radii,
-	borderWidths,
+	borderWidth,
 	scale,
 	space,
 	fontFamily,
@@ -15,7 +15,7 @@ import {
 export const baseVars = createGlobalThemeContract(
 	{
 		animationSpeed,
-		borderWidths,
+		borderWidth,
 		color: colors(),
 		fontFamily,
 		fontSize,
@@ -29,7 +29,7 @@ export const baseVars = createGlobalThemeContract(
 
 createGlobalTheme(':root', baseVars, {
 	animationSpeed,
-	borderWidths,
+	borderWidth,
 	color: colors(),
 	fontFamily,
 	fontSize,
@@ -46,7 +46,11 @@ export const theme = createGlobalThemeContract(
 				primary: ''
 			},
 			background: {
-				site: ''
+				site: '',
+				bottomSheet: ''
+			},
+			border: {
+				subtle: ''
 			},
 			heading: {
 				default: ''
@@ -65,7 +69,11 @@ createGlobalTheme('html[data-theme="dark"]', theme, {
 			primary: `rgb(${baseVars.color.blue40})`
 		},
 		background: {
-			site: `rgb(${baseVars.color.grey100})`
+			site: `rgb(${baseVars.color.grey100})`,
+			bottomSheet: `rgba(${baseVars.color.grey40}, 0.04)`
+		},
+		border: {
+			subtle: `rgb(${baseVars.color.grey80})`
 		},
 		heading: {
 			default: `rgb(${baseVars.color.grey10})`
@@ -82,7 +90,11 @@ createGlobalTheme('html[data-theme="light"]', theme, {
 			primary: `rgb(${baseVars.color.blue40})`
 		},
 		background: {
-			site: `rgb(${baseVars.color.grey10})`
+			site: `rgb(${baseVars.color.grey10})`,
+			bottomSheet: `rgba(${baseVars.color.grey20}, 0.05)`
+		},
+		border: {
+			subtle: `rgb(${baseVars.color.grey30})`
 		},
 		heading: {
 			default: `rgb(${baseVars.color.grey100})`
