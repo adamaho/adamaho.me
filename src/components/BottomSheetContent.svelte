@@ -28,9 +28,10 @@
 			duration,
 			css: (t: number) => {
 				const l = linear(t);
-				return `backdrop-filter: blur(${
-					l * 5
-				}px); background-color: rgba(var(--aho-colors-background-site), ${l * 0.5})`;
+				return `
+                    backdrop-filter: blur(${l * 5}px);
+                    -webkit-backdrop-filter: blur(${l * 5}px);
+                    background-color: rgba(var(--aho-colors-background-site), ${l * 0.5})`;
 			}
 		};
 	}
@@ -76,6 +77,7 @@
 
 	.bottom-sheet-mask {
 		backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
 		background-color: rgba(var(--aho-colors-background-site), 0.5);
 		height: 100%;
 		left: 0;
