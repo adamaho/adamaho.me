@@ -18,7 +18,7 @@
 <style global>
 	html {
 		height: -webkit-fill-available;
-		background-color: var(--aho-colors-background-site);
+		background-color: rgb(var(--aho-colors-background-site));
 	}
 
 	body {

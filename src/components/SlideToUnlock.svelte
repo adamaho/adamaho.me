@@ -7,7 +7,7 @@
 
 	const dispatch = createEventDispatcher();
 
-	const INITIAL_SHIFTX = 6;
+	const INITIAL_SHIFTX = 5;
 	const TRACK_WIDTH = 235;
 
 	let initialContactPointX: number;
@@ -144,8 +144,9 @@
 		box-shadow: 0 0 0 3px rgba(var(--aho-color-grey30), 0.6);
 	}
 
-	:global(html[data-theme='light'], html[data-theme='dark'] .slide-to-unlock-track-active) {
-		box-shadow: 0 0 0 3px var(--aho-colors-brand-primary);
+	:global(html[data-theme='light'] .slide-to-unlock-track-active, html[data-theme='dark']
+			.slide-to-unlock-track-active) {
+		box-shadow: 0 0 0 3px rgba(var(--aho-colors-brand-primary), 0.8);
 	}
 
 	.slide-to-unlock-thumb {
