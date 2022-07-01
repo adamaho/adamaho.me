@@ -1,39 +1,23 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
-	import { expoOut, linear } from 'svelte/easing';
 
+    import { sheet, blur } from '~/transitions/index';
 	import type { BottomSheetContext } from './BottomSheet.svelte';
 	import { BOTTOM_SHEET_CONTEXT } from './BottomSheet.svelte';
 
 	const context = getContext<BottomSheetContext>(BOTTOM_SHEET_CONTEXT);
 
-	/**
-	 * Define a custom bottom sheet animation
-	 */
-	function sheet(_node: HTMLElement, { duration = 400 }: { duration?: number }) {
-		return {
-			duration,
-			css: (t: number) => {
-				const eased = expoOut(t);
-				return `transform: translate(-50%, -${eased * 100}%);`;
-			}
-		};
+	$: if ($context.isOpen) {
+		document.body.style.overflow = 'hidden';
+		document.body.style.position = 'relative';
 	}
 
 	/**
-	 * Define a custom blur animation
+	 * Handles the transition end
 	 */
-	function blur(_node: HTMLElement, { duration = 400 }: { duration?: number }) {
-		return {
-			duration,
-			css: (t: number) => {
-				const l = linear(t);
-				return `
-                    backdrop-filter: blur(${l * 5}px);
-                    -webkit-backdrop-filter: blur(${l * 5}px);
-                    background-color: rgba(var(--aho-colors-background-site), ${l * 0.5})`;
-			}
-		};
+	function handleTransitionOutroEnd() {
+		document.body.style.overflow = '';
+		document.body.style.position = '';
 	}
 </script>
 
@@ -43,7 +27,13 @@
 			<slot />
 		</div>
 	</div>
-	<div class="bottom-sheet-mask" on:click={() => context.setIsOpen(false)} in:blur out:blur />
+	<div
+		class="bottom-sheet-mask"
+		on:click={() => context.setIsOpen(false)}
+		on:outroend={handleTransitionOutroEnd}
+		in:blur
+		out:blur
+	/>
 {/if}
 
 <style>
@@ -69,15 +59,13 @@
 			rgb(var(--aho-color-purple50))
 		);
 		border-radius: var(--aho-radii-large);
-		border: var(--aho-border-width-1) solid var(--aho-colors-border-subtle);
-		/* box-shadow: 0 0 9px 2px rgba(var(--aho-color-grey100), 0.2); */
-		height: 400px;
+		height: 240px;
 		width: 100%;
 	}
 
 	.bottom-sheet-mask {
 		backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
 		background-color: rgba(var(--aho-colors-background-site), 0.5);
 		height: 100%;
 		left: 0;

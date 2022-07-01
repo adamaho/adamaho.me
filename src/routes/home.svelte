@@ -7,7 +7,7 @@
 
 <BottomSheet>
 	<BottomSheetTrigger as={NavTrigger}>Trigger</BottomSheetTrigger>
-	<BottomSheetContent>Hello World</BottomSheetContent>
+	<BottomSheetContent />
 </BottomSheet>
 
 <h1>adam aho</h1>
