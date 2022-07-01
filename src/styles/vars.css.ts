@@ -2,14 +2,14 @@ import { createGlobalTheme, createGlobalThemeContract } from '@vanilla-extract/c
 
 import {
 	animationSpeed,
-	colors,
-	radii,
 	borderWidth,
-	scale,
-	space,
+	colors,
 	fontFamily,
 	fontSize,
-	fontWeight
+	fontWeight,
+	radii,
+	scale,
+	space
 } from './tokens';
 
 export const baseVars = createGlobalThemeContract(
@@ -43,7 +43,8 @@ export const theme = createGlobalThemeContract(
 	{
 		colors: {
 			brand: {
-				primary: ''
+				primary: '',
+				secondary: ''
 			},
 			background: {
 				site: ''
@@ -65,7 +66,8 @@ export const theme = createGlobalThemeContract(
 createGlobalTheme('html[data-theme="dark"]', theme, {
 	colors: {
 		brand: {
-			primary: baseVars.color.blue40
+			primary: baseVars.color.blue40,
+			secondary: baseVars.color.purple50
 		},
 		background: {
 			site: baseVars.color.grey90
@@ -85,7 +87,8 @@ createGlobalTheme('html[data-theme="dark"]', theme, {
 createGlobalTheme('html[data-theme="light"]', theme, {
 	colors: {
 		brand: {
-			primary: baseVars.color.blue40
+			primary: baseVars.color.blue40,
+			secondary: baseVars.color.purple50
 		},
 		background: {
 			site: baseVars.color.grey10

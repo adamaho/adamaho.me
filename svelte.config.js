@@ -1,5 +1,5 @@
-import path from 'path';
 import adapter from '@sveltejs/adapter-auto';
+import path from 'path';
 import preprocess from 'svelte-preprocess';
 
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
@@ -19,7 +19,7 @@ const config = {
 					'~/styles': path.resolve('./src/styles'),
 					'~/components': path.resolve('./src/components'),
 					'~/stores': path.resolve('./src/stores'),
-					'~/transitions': path.resolve('./src/transitions'),
+					'~/lib': path.resolve('./src/lib')
 				}
 			}
 		}

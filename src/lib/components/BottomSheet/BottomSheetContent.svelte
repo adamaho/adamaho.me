@@ -1,9 +1,13 @@
 <script lang="ts">
 	import { getContext } from 'svelte';
+	import type { SvelteComponent } from 'svelte';
 
-    import { sheet, blur } from '~/transitions/index';
+	import { sheet, blur } from '~/lib/transitions/index';
+
 	import type { BottomSheetContext } from './BottomSheet.svelte';
 	import { BOTTOM_SHEET_CONTEXT } from './BottomSheet.svelte';
+
+	export let as: new (...args: any[]) => SvelteComponent;
 
 	const context = getContext<BottomSheetContext>(BOTTOM_SHEET_CONTEXT);
 
@@ -23,9 +27,9 @@
 
 {#if $context.isOpen}
 	<div class="bottom-sheet-container" in:sheet out:sheet>
-		<div class="bottom-sheet-content">
+		<svelte:component this={as}>
 			<slot />
-		</div>
+		</svelte:component>
 	</div>
 	<div
 		class="bottom-sheet-mask"
@@ -50,17 +54,6 @@
 		max-width: var(--bottom-sheet-max-width);
 		width: 100%;
 		z-index: 2;
-	}
-
-	.bottom-sheet-content {
-		background: linear-gradient(
-			to bottom right,
-			rgb(var(--aho-color-blue40)),
-			rgb(var(--aho-color-purple50))
-		);
-		border-radius: var(--aho-radii-large);
-		height: 240px;
-		width: 100%;
 	}
 
 	.bottom-sheet-mask {

@@ -1,17 +1,8 @@
 <script lang="ts">
-	import BottomSheet from '~/components/BottomSheet.svelte';
-	import BottomSheetTrigger from '~/components/BottomSheetTrigger.svelte';
-	import BottomSheetContent from '~/components/BottomSheetContent.svelte';
-	import NavTrigger from '~/components/NavTrigger.svelte';
+	import Nav from '~/components/Nav';
 </script>
 
-<BottomSheet>
-	<BottomSheetTrigger as={NavTrigger}>Trigger</BottomSheetTrigger>
-	<BottomSheetContent />
-</BottomSheet>
-
-<h1>adam aho</h1>
-<p>What is going on with you today?</p>
+<Nav />
 
 <p>
 	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra lobortis eros quis tempus.

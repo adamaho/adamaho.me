@@ -1,6 +1,8 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 
+	import Nav from '~/components/Nav';
 	import { theme } from '~/stores/theme';
 
 	import '~/styles/vars.css';
@@ -12,6 +14,9 @@
 </script>
 
 {#if $theme.hasInitialized}
+	{#if $page.routeId !== ''}
+		<Nav />
+	{/if}
 	<slot />
 {/if}
 
