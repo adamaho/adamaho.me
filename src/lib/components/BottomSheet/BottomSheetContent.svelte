@@ -9,11 +9,16 @@
 
 	export let as: new (...args: any[]) => SvelteComponent;
 
+	let bottomSheet: HTMLDivElement;
+
 	const context = getContext<BottomSheetContext>(BOTTOM_SHEET_CONTEXT);
 
 	$: if ($context.isOpen) {
 		document.body.style.overflow = 'hidden';
 		document.body.style.position = 'relative';
+
+		// find the first focusable element
+		console.log(bottomSheet);
 	}
 
 	/**
@@ -26,7 +31,7 @@
 </script>
 
 {#if $context.isOpen}
-	<div class="bottom-sheet-container" in:sheet out:sheet>
+	<div bind:this={bottomSheet} class="bottom-sheet-container" in:sheet out:sheet>
 		<svelte:component this={as}>
 			<slot />
 		</svelte:component>

@@ -43,7 +43,7 @@
 
 	@keyframes fly-up {
 		0% {
-			opactiy: 1;
+			opacity: 1;
 			transform: translateY(0px);
 		}
 		50% {

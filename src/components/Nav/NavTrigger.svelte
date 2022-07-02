@@ -1,4 +1,6 @@
-<button class="nav-trigger" on:click> Hello </button>
+<button class="nav-trigger" on:click>
+	<slot />
+</button>
 
 <style>
 	.nav-trigger {

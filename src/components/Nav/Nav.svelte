@@ -13,8 +13,8 @@
 <BottomSheet>
 	<BottomSheetTrigger as={NavTrigger}>Trigger</BottomSheetTrigger>
 	<BottomSheetContent as={NavContent}>
-		<NavItem>home</NavItem>
-		<NavItem>projects</NavItem>
-		<NavItem>writing</NavItem>
+		<NavItem href="/home">home</NavItem>
+		<NavItem href="/projects">projects</NavItem>
+		<NavItem href="/blog">blog</NavItem>
 	</BottomSheetContent>
 </BottomSheet>

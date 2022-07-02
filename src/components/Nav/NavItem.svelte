@@ -1,3 +1,9 @@
-<button>
+<script lang="ts">
+	export let href: string;
+</script>
+
+<a {href}>
+	<slot name="icon" />
 	<slot />
-</button>
+	<slot name="shortcut" />
+</a>
