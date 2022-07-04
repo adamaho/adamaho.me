@@ -9,16 +9,18 @@
 
 	export let as: new (...args: any[]) => SvelteComponent;
 
-	let bottomSheet: HTMLDivElement;
+	let bottomSheetElement: HTMLDivElement;
+	let isDragging = false;
+	let initialContactPointY = 0;
+	let initialBottomSheetHeight = 0;
+	let shiftYPercentage = -100;
 
 	const context = getContext<BottomSheetContext>(BOTTOM_SHEET_CONTEXT);
 
 	$: if ($context.isOpen) {
 		document.body.style.overflow = 'hidden';
 		document.body.style.position = 'relative';
-
-		// find the first focusable element
-		console.log(bottomSheet);
+		document.body.style.touchAction = 'none';
 	}
 
 	/**
@@ -27,11 +29,63 @@
 	function handleTransitionOutroEnd() {
 		document.body.style.overflow = '';
 		document.body.style.position = '';
+		document.body.style.touchAction = '';
+	}
+
+	/**
+	 * Handles the pointer down event
+	 */
+	function handlePointerDown(e: PointerEvent) {
+		isDragging = true;
+		initialContactPointY = e.y;
+		initialBottomSheetHeight = bottomSheetElement.getBoundingClientRect().height;
+	}
+
+	function handlePointerMove(e: PointerEvent) {
+		if (!isDragging) {
+			return;
+		}
+
+		// compute the shift percentage based on the initial bottom sheet
+		const newShiftPercentage =
+			(1 - (e.y - initialContactPointY) / initialBottomSheetHeight) * -100;
+
+		// if the new shift percentage is less than -100 it means that the user is
+		// attempting to drag the bottom sheet up, which we dont support.
+		if (newShiftPercentage < -100) {
+			return;
+		}
+
+		// update the shift y percentage
+		shiftYPercentage = newShiftPercentage;
+	}
+
+	/**
+	 * Handles the pointer up event
+	 */
+	function handlePointerUp() {
+		isDragging = false;
+
+		if (shiftYPercentage >= -50) {
+			context.setIsOpen(false);
+		}
+
+		shiftYPercentage = -100;
 	}
 </script>
 
+<svelte:body on:pointerup={handlePointerUp} />
+
 {#if $context.isOpen}
-	<div bind:this={bottomSheet} class="bottom-sheet-container" in:sheet out:sheet>
+	<div
+		class="bottom-sheet-container"
+		style={`transform: translate(-50%, ${shiftYPercentage}%);`}
+		on:pointerdown={handlePointerDown}
+		on:pointermove={handlePointerMove}
+		bind:this={bottomSheetElement}
+		in:sheet
+		out:sheet={{ duration: 100, initialY: shiftYPercentage }}
+	>
 		<svelte:component this={as}>
 			<slot />
 		</svelte:component>
