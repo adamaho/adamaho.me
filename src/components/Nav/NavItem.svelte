@@ -7,6 +7,7 @@
 	} from '~/lib/components/BottomSheet/BottomSheet.svelte';
 
 	export let href: string;
+	export let label: string;
 
 	const context = getContext<BottomSheetContext>(BOTTOM_SHEET_CONTEXT);
 
@@ -21,7 +22,7 @@
 	}
 </script>
 
-<a {href} class="nav-item" on:click={handleClick}>
+<a {href} class="nav-item" on:click={handleClick} aria-label={`go to ${label}`}>
 	<div class="nav-item-shortcut">
 		<slot name="shortcut" />
 	</div>
@@ -29,7 +30,7 @@
 		<slot name="icon" class="nav-item-icon" />
 	</div>
 	<span class="nav-item-text">
-		<slot />
+		{label}
 	</span>
 </a>
 
