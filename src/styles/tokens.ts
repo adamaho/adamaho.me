@@ -163,7 +163,7 @@ export const space = {
 	full: '100%'
 } as const;
 
-export type Spacing = keyof typeof spacing;
+export type Space = keyof typeof space;
 
 export const scale = {
 	negSmall: '0.98',
@@ -171,7 +171,8 @@ export const scale = {
 	negLarge: '0.9',
 	small: '1.02',
 	medium: '1.05',
-	large: '1.1'
+	large: '1.1',
+	xlarge: '1.2'
 };
 
 export type Scale = keyof typeof scale;

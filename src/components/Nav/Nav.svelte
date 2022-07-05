@@ -1,10 +1,11 @@
 <script lang="ts">
 	import {
 		BottomSheet,
-		BottomSheetButton,
 		BottomSheetContent,
 		BottomSheetTrigger
 	} from '~/lib/components/BottomSheet';
+
+	import { Home, Lightbulb, Pencil } from '~/lib/components/Icons';
 
 	import NavContent from './NavContent.svelte';
 	import NavItem from './NavItem.svelte';
@@ -14,8 +15,20 @@
 <BottomSheet>
 	<BottomSheetTrigger as={NavTrigger} />
 	<BottomSheetContent as={NavContent}>
-		<BottomSheetButton as={NavItem} href="/home">home</BottomSheetButton>
-		<BottomSheetButton as={NavItem} href="/projects">projects</BottomSheetButton>
-		<BottomSheetButton as={NavItem} href="/blog">blog</BottomSheetButton>
+		<NavItem href="/home">
+			<svelte:fragment slot="shortcut">^ 1</svelte:fragment>
+			<svelte:component this={Home} slot="icon" />
+			home
+		</NavItem>
+		<NavItem href="/projects">
+			<svelte:fragment slot="shortcut">^ 2</svelte:fragment>
+			<svelte:component this={Lightbulb} slot="icon" />
+			projects
+		</NavItem>
+		<NavItem href="/blog">
+			<svelte:fragment slot="shortcut">^ 3</svelte:fragment>
+			<svelte:component this={Pencil} slot="icon" />
+			blog
+		</NavItem>
 	</BottomSheetContent>
 </BottomSheet>

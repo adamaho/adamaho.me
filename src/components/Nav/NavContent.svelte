@@ -9,11 +9,7 @@
 
 <style>
 	.nav-sheet-container {
-		background: linear-gradient(
-			to bottom right,
-			rgb(var(--aho-colors-brand-primary)),
-			rgb(var(--aho-colors-brand-secondary))
-		);
+		background: var(--aho-colors-gradients-brand);
 		border-radius: var(--aho-radii-large);
 		width: 100%;
 	}
@@ -38,5 +34,6 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-template-rows: auto;
 		padding: var(--aho-space-small);
+		padding-top: 0;
 	}
 </style>

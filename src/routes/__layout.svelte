@@ -11,7 +11,13 @@
 		// init the theme on mount
 		theme.initTheme();
 	});
+
+	function handleKeydown(e: KeyboardEvent) {
+		console.log(event);
+	}
 </script>
+
+<svelte:window on:keydown={handleKeydown} />
 
 {#if $theme.hasInitialized}
 	{#if $page.routeId !== ''}

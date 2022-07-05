@@ -2,11 +2,7 @@
 
 <style>
 	.nav-trigger {
-		background: linear-gradient(
-			to bottom right,
-			rgb(var(--aho-colors-brand-primary)),
-			rgb(var(--aho-colors-brand-secondary))
-		);
+		background: var(--aho-colors-gradients-brand);
 		border: none;
 		border-radius: 50%;
 		bottom: var(--aho-space-xlarge);

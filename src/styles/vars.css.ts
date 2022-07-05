@@ -52,6 +52,9 @@ export const theme = createGlobalThemeContract(
 			border: {
 				subtle: ''
 			},
+			gradients: {
+				brand: ''
+			},
 			heading: {
 				default: ''
 			},
@@ -70,10 +73,17 @@ createGlobalTheme('html[data-theme="dark"]', theme, {
 			secondary: baseVars.color.purple50
 		},
 		background: {
-			site: baseVars.color.grey90
+			site: baseVars.color.grey100
 		},
 		border: {
 			subtle: `rgb(${baseVars.color.grey80})`
+		},
+		gradients: {
+			brand: `linear-gradient(
+                to bottom right,
+                rgb(${theme.colors.brand.primary}),
+                rgb(${theme.colors.brand.secondary})
+            );`
 		},
 		heading: {
 			default: `rgb(${baseVars.color.grey10})`
@@ -95,6 +105,13 @@ createGlobalTheme('html[data-theme="light"]', theme, {
 		},
 		border: {
 			subtle: `rgb(${baseVars.color.grey30})`
+		},
+		gradients: {
+			brand: `linear-gradient(
+                to bottom right,
+                rgb(${theme.colors.brand.primary}),
+                rgb(${theme.colors.brand.secondary})
+            );`
 		},
 		heading: {
 			default: `rgb(${baseVars.color.grey100})`
