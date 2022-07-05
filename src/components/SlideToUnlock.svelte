@@ -1,9 +1,7 @@
 <script lang="ts">
 	import { onMount, createEventDispatcher, onDestroy } from 'svelte';
 
-	enum KeyCodes {
-		Enter = 'Enter'
-	}
+	import { KeyCodes } from '~/constants/keycodes';
 
 	const dispatch = createEventDispatcher();
 

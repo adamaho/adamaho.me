@@ -1,16 +1,15 @@
 <script lang="ts">
-	import { getContext, createEventDispatcher } from 'svelte';
+	import { createEventDispatcher } from 'svelte';
 
-	import {
-		BOTTOM_SHEET_CONTEXT,
-		type BottomSheetContext
-	} from '~/lib/components/BottomSheet/BottomSheet.svelte';
+	import { getBottomSheetContext } from '~/lib/components/BottomSheet/BottomSheet.svelte';
 
 	export let href: string;
 	export let label: string;
 
-	const context = getContext<BottomSheetContext>(BOTTOM_SHEET_CONTEXT);
+	// sub to context
+	const context = getBottomSheetContext();
 
+	// create an event dispatcher
 	const dispatch = createEventDispatcher();
 
 	/**

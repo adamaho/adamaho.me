@@ -10,11 +10,19 @@
 	}
 
 	export const BOTTOM_SHEET_CONTEXT = 'BOTTOM_SHEET_CONTEXT';
+
+	/**
+	 * Provides the bottom sheet context
+	 */
+	export function getBottomSheetContext() {
+		return getContext<BottomSheetContext>(BOTTOM_SHEET_CONTEXT);
+	}
 </script>
 
 <script lang="ts">
-	import { setContext } from 'svelte';
+	import { getContext, setContext } from 'svelte';
 	import { writable } from 'svelte/store';
+	import { KeyCodes } from '~/constants/keycodes';
 
 	/**
 	 * Factory to create the bottom sheet store
@@ -47,6 +55,18 @@
 	const bottomSheetStore = createBottomSheetStore();
 
 	setContext(BOTTOM_SHEET_CONTEXT, bottomSheetStore);
+
+	/**
+	 * Handles the keydown event and closes the bottom sheet when escape is clicked
+	 * @param e
+	 */
+	function handleKeydown(e: KeyboardEvent) {
+		if ($bottomSheetStore.isOpen && e.key === KeyCodes.Escape) {
+			bottomSheetStore.setIsOpen(false);
+		}
+	}
 </script>
+
+<svelte:body on:keydown={handleKeydown} />
 
 <slot />

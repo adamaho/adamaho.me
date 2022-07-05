@@ -1,11 +1,11 @@
 <script lang="ts">
 	import type { SvelteComponent } from 'svelte';
-	import { getContext, createEventDispatcher } from 'svelte';
+	import { createEventDispatcher } from 'svelte';
 
-	import type { BottomSheetContext } from './BottomSheet.svelte';
-	import { BOTTOM_SHEET_CONTEXT } from './BottomSheet.svelte';
+	import { getBottomSheetContext } from './BottomSheet.svelte';
 
-	const context = getContext<BottomSheetContext>(BOTTOM_SHEET_CONTEXT);
+	// sub to context
+	const context = getBottomSheetContext();
 
 	const dispatch = createEventDispatcher();
 

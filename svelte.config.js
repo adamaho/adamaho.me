@@ -19,7 +19,8 @@ const config = {
 					'~/styles': path.resolve('./src/styles'),
 					'~/components': path.resolve('./src/components'),
 					'~/stores': path.resolve('./src/stores'),
-					'~/lib': path.resolve('./src/lib')
+					'~/lib': path.resolve('./src/lib'),
+					'~/constants': path.resolve('./src/constants')
 				}
 			}
 		}

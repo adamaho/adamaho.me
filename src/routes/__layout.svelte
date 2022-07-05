@@ -4,6 +4,7 @@
 
 	import Nav from '~/components/Nav';
 	import { theme } from '~/stores/theme';
+	import { shortcuts } from '~/stores/shortcuts';
 
 	import '~/styles/vars.css';
 
@@ -11,13 +12,9 @@
 		// init the theme on mount
 		theme.initTheme();
 	});
-
-	function handleKeydown(e: KeyboardEvent) {
-		console.log(event);
-	}
 </script>
 
-<svelte:window on:keydown={handleKeydown} />
+<svelte:window on:keydown={shortcuts.handleKeydown} />
 
 {#if $theme.hasInitialized}
 	{#if $page.routeId !== ''}
