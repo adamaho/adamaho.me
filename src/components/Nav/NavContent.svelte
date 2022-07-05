@@ -2,7 +2,9 @@
 	<div class="nav-sheet-header">
 		<div class="nav-sheet-header-thumb" />
 	</div>
-	<slot />
+	<div class="nav-sheet-items">
+		<slot />
+	</div>
 </div>
 
 <style>
@@ -13,7 +15,6 @@
 			rgb(var(--aho-colors-brand-secondary))
 		);
 		border-radius: var(--aho-radii-large);
-		height: 240px;
 		width: 100%;
 	}
 
@@ -29,5 +30,13 @@
 		border-radius: var(--aho-space-small);
 		height: var(--aho-space-small);
 		width: var(--aho-space-5xlarge);
+	}
+
+	.nav-sheet-items {
+		display: grid;
+		gap: var(--aho-space-small);
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: auto;
+		padding: var(--aho-space-small);
 	}
 </style>

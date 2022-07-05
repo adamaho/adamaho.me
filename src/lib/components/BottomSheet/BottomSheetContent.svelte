@@ -74,14 +74,13 @@
 	}
 </script>
 
-<svelte:body on:pointerup={handlePointerUp} />
+<svelte:body on:pointerup={handlePointerUp} on:pointermove={handlePointerMove} />
 
 {#if $context.isOpen}
 	<div
 		class="bottom-sheet-container"
-		style={`transform: translate(-50%, ${shiftYPercentage}%);`}
+		style={`transform: translate(-50%, ${shiftYPercentage.toFixed()}%);`}
 		on:pointerdown={handlePointerDown}
-		on:pointermove={handlePointerMove}
 		bind:this={bottomSheetElement}
 		in:sheet
 		out:sheet={{ duration: 100, initialY: shiftYPercentage }}
@@ -112,6 +111,7 @@
 		transform: translate(-50%, -100%);
 		max-width: var(--bottom-sheet-max-width);
 		width: 100%;
+		will-change: transform;
 		z-index: 2;
 	}
 

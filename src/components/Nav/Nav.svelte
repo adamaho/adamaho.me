@@ -1,6 +1,7 @@
 <script lang="ts">
 	import {
 		BottomSheet,
+		BottomSheetButton,
 		BottomSheetContent,
 		BottomSheetTrigger
 	} from '~/lib/components/BottomSheet';
@@ -11,10 +12,10 @@
 </script>
 
 <BottomSheet>
-	<BottomSheetTrigger as={NavTrigger}>Trigger</BottomSheetTrigger>
+	<BottomSheetTrigger as={NavTrigger} />
 	<BottomSheetContent as={NavContent}>
-		<NavItem href="/home">home</NavItem>
-		<NavItem href="/projects">projects</NavItem>
-		<NavItem href="/blog">blog</NavItem>
+		<BottomSheetButton as={NavItem} href="/home">home</BottomSheetButton>
+		<BottomSheetButton as={NavItem} href="/projects">projects</BottomSheetButton>
+		<BottomSheetButton as={NavItem} href="/blog">blog</BottomSheetButton>
 	</BottomSheetContent>
 </BottomSheet>
