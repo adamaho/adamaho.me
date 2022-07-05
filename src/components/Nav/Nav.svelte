@@ -10,7 +10,7 @@
 		BottomSheetTrigger
 	} from '~/lib/components/BottomSheet';
 
-	import { Home, Lightbulb, Pencil } from '~/lib/components/Icons';
+	import { Contrast, Home, Lightbulb, Pencil } from '~/lib/components/Icons';
 
 	import NavContent from './NavContent.svelte';
 	import NavItem from './NavItem.svelte';
@@ -20,7 +20,8 @@
 	const NAV_SHORTCUTS = [
 		{ key: KeyCodes.One, route: '/home' },
 		{ key: KeyCodes.Two, route: '/projects' },
-		{ key: KeyCodes.Three, route: '/blog' }
+		{ key: KeyCodes.Three, route: '/blog' },
+		{ key: KeyCodes.Four, route: '/settings' }
 	];
 
 	// When the component mounts, add the shortcut listeners
@@ -54,6 +55,10 @@
 		<NavItem href="/blog" label="blog">
 			<svelte:fragment slot="shortcut">^ 3</svelte:fragment>
 			<svelte:component this={Pencil} slot="icon" />
+		</NavItem>
+		<NavItem href="/settings" label="settings">
+			<svelte:fragment slot="shortcut">^ 4</svelte:fragment>
+			<svelte:component this={Contrast} slot="icon" />
 		</NavItem>
 	</BottomSheetContent>
 </BottomSheet>

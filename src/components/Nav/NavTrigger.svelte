@@ -12,11 +12,11 @@
 		left: 50%;
 		position: fixed;
 		transform: translate(-50%);
-		transition: border-radius var(--aho-animation-speed-fast) ease;
+		transition: transform var(--aho-animation-speed-fast) ease;
 		width: var(--aho-space-5xlarge);
 	}
 
 	.nav-trigger:hover {
-		border-radius: var(--aho-radii-large);
+		transform: translate(-50%) scale(var(--aho-scale-large));
 	}
 </style>
