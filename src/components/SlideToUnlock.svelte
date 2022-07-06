@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount, createEventDispatcher, onDestroy } from 'svelte';
 
+	import { ArrowRight } from '~/lib/components/Icons';
 	import { KeyCodes } from '~/constants/keycodes';
 
 	const dispatch = createEventDispatcher();
@@ -107,15 +108,17 @@
 		on:pointerdown={handlePointerDown}
 		aria-label="slide to unlock or press command/control + u"
 		style={`left: ${shiftX}px;`}
-	/>
+	>
+		<svelte:component this={ArrowRight} />
+	</button>
 </div>
 
 <style>
 	.slide-to-unlock-track {
 		align-items: center;
-		border-radius: var(--aho-radii-small);
+		border-radius: 50px;
 		display: flex;
-		height: var(--aho-space-4xlarge);
+		height: 50px;
 		max-width: 280px;
 		position: relative;
 		transition-duration: var(--aho-animation-speed-fast);
@@ -148,9 +151,15 @@
 	}
 
 	.slide-to-unlock-thumb {
-		border-radius: var(--aho-radii-small);
+		align-items: center;
+		background: var(--aho-colors-gradients-brand);
+		border-radius: 50%;
 		border-width: var(--aho-radii-0);
-		height: var(--aho-space-3xlarge);
+		color: rgb(var(--aho-color-grey10));
+		cursor: pointer;
+		display: flex;
+		height: var(--aho-space-4xlarge);
+		justify-content: center;
 		position: absolute;
 		user-select: none;
 		--webkit-user-select: none;
@@ -160,12 +169,9 @@
 		transition-timing-function: ease;
 	}
 
-	:global(html[data-theme='dark'] .slide-to-unlock-thumb) {
-		background-color: rgb(var(--aho-color-grey10));
-	}
-
-	:global(html[data-theme='light'] .slide-to-unlock-thumb) {
-		background-color: rgb(var(--aho-color-grey90));
+	:global(.slide-to-unlock-thumb > svg) {
+		height: var(--aho-space-large);
+		width: var(--aho-space-large);
 	}
 
 	@keyframes nudge {
