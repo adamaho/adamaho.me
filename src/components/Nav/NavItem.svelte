@@ -37,6 +37,7 @@
 	.nav-item {
 		align-items: center;
 		background-color: rgba(var(--aho-color-grey10), 0.5);
+		border: 0;
 		border-radius: var(--aho-radii-medium);
 		display: flex;
 		flex-direction: column;

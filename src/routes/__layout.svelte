@@ -30,6 +30,7 @@
 		color: var(--aho-colors-text-default);
 		font-family: var(--aho-font-family-body);
 		font-size: var(--aho-font-size-medium);
+		font-weight: var(--aho-font-weight-thin);
 		margin: 0;
 		min-height: 100vh;
 		min-height: -webkit-fill-available;
@@ -67,5 +68,17 @@
 	p,
 	span {
 		color: var(--aho-colors-text-default);
+	}
+
+	p {
+		margin-top: var(--aho-space-small);
+	}
+
+	a {
+		border-bottom: 1px solid var(--aho-colors-border-subtle);
+		color: var(--aho-colors-link-default);
+		font-weight: var(--aho-font-weight-normal);
+		padding-bottom: var(--aho-space-xxsmall);
+		text-decoration: none;
 	}
 </style>

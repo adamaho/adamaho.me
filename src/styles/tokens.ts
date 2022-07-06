@@ -198,6 +198,7 @@ export const fontFamily = {
 export type FontFamily = keyof typeof fontFamily;
 
 export const fontWeight = {
+	thin: '300',
 	normal: '500',
 	bold: '700',
 	extraBold: '900'

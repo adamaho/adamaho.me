@@ -18,4 +18,10 @@
 		min-height: -webkit-fill-available;
 		padding: var(--aho-space-6xlarge) var(--aho-space-large);
 	}
+
+	@media screen and (min-width: 640px) {
+		.site-layout {
+			padding: var(--aho-space-7xlarge) var(--aho-space-large);
+		}
+	}
 </style>

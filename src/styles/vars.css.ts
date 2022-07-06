@@ -58,6 +58,10 @@ export const theme = createGlobalThemeContract(
 			heading: {
 				default: ''
 			},
+			link: {
+				default: ''
+			},
+			separator: '',
 			text: {
 				default: ''
 			}
@@ -88,8 +92,12 @@ createGlobalTheme('html[data-theme="dark"]', theme, {
 		heading: {
 			default: `rgb(${baseVars.color.grey10})`
 		},
+		link: {
+			default: `rgb(${baseVars.color.grey20})`
+		},
+		separator: `rgb(${baseVars.color.grey80})`,
 		text: {
-			default: `rgb(${baseVars.color.grey40})`
+			default: `rgb(${baseVars.color.grey50})`
 		}
 	}
 });
@@ -116,8 +124,12 @@ createGlobalTheme('html[data-theme="light"]', theme, {
 		heading: {
 			default: `rgb(${baseVars.color.grey100})`
 		},
+		link: {
+			default: `rgb(${baseVars.color.grey90})`
+		},
+		separator: `rgb(${baseVars.color.grey60})`,
 		text: {
-			default: `rgb(${baseVars.color.grey80})`
+			default: `rgb(${baseVars.color.grey70})`
 		}
 	}
 });

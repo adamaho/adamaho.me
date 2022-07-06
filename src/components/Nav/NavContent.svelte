@@ -38,6 +38,14 @@
 	}
 
 	@media screen and (min-width: 640px) {
+		.nav-sheet-header {
+			padding: var(--aho-space-xsmall);
+		}
+
+		.nav-sheet-header-thumb {
+			display: none;
+		}
+
 		.nav-sheet-items {
 			grid-template-columns: repeat(4, 1fr);
 		}
