@@ -8,6 +8,7 @@
 		border: none;
 		border-radius: 50%;
 		bottom: var(--aho-space-xlarge);
+		cursor: pointer;
 		height: var(--aho-space-5xlarge);
 		left: 50%;
 		position: fixed;

@@ -1,3 +1,8 @@
 {
-  "**/*.{ts,svelte}": ["prettier --write --plugin-search-dir=. .", "prettier --check --plugin-search-dir=. .", "eslint ."]
+  "**/*.{ts,svelte}": [
+        "prettier --write --plugin-search-dir=. .",
+        "prettier --check --plugin-search-dir=. .",
+        "eslint .",
+        "svelte-check --tsconfig ./tsconfig.json"
+    ]
 }
