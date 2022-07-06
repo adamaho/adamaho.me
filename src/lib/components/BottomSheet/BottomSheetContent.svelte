@@ -7,7 +7,7 @@
 
 	export let as: new (...args: any[]) => SvelteComponent;
 
-	let bottomSheetElement: HTMLDivElement;
+	let bottomSheetElement: HTMLElement;
 	let isDragging = false;
 	let initialContactPointY = 0;
 	let initialBottomSheetHeight = 0;
@@ -76,7 +76,7 @@
 <svelte:body on:pointerup={handlePointerUp} on:pointermove={handlePointerMove} />
 
 {#if $context.isOpen}
-	<div
+	<footer
 		class="bottom-sheet-container"
 		style={`transform: translate(-50%, ${shiftYPercentage.toFixed()}%);`}
 		on:pointerdown={handlePointerDown}
@@ -87,7 +87,7 @@
 		<svelte:component this={as}>
 			<slot />
 		</svelte:component>
-	</div>
+	</footer>
 	<div
 		class="bottom-sheet-mask"
 		on:click={() => context.setIsOpen(false)}

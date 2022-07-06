@@ -17,9 +17,6 @@
 <svelte:window on:keydown={shortcuts.handleKeydown} />
 
 {#if $theme.hasInitialized}
-	{#if $page.routeId !== ''}
-		<Nav />
-	{/if}
 	<slot />
 {/if}
 

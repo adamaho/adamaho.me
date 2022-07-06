@@ -31,7 +31,12 @@ function createThemeStore() {
 		if (browser) {
 			set({ theme, hasInitialized: true });
 			localStorage.setItem(LOCAL_STORAGE_THEME_KEY, theme);
-			document.querySelector('html')?.setAttribute('data-theme', theme);
+			const htmlElement = document.querySelector('html');
+
+			if (htmlElement) {
+				htmlElement.setAttribute('data-theme', theme);
+				htmlElement.style.colorScheme = theme;
+			}
 		}
 	}
 
