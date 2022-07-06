@@ -42,23 +42,32 @@
 </script>
 
 <BottomSheet>
-	<BottomSheetTrigger as={NavTrigger} />
-	<BottomSheetContent as={NavContent}>
-		<NavItem href="/home" label="home">
-			<svelte:fragment slot="shortcut">^ 1</svelte:fragment>
-			<svelte:component this={Home} slot="icon" />
-		</NavItem>
-		<NavItem href="/projects" label="projects">
-			<svelte:fragment slot="shortcut">^ 2</svelte:fragment>
-			<svelte:component this={Lightbulb} slot="icon" />
-		</NavItem>
-		<NavItem href="/blog" label="blog">
-			<svelte:fragment slot="shortcut">^ 3</svelte:fragment>
-			<svelte:component this={Pencil} slot="icon" />
-		</NavItem>
-		<NavItem href="/settings" label="settings">
-			<svelte:fragment slot="shortcut">^ 4</svelte:fragment>
-			<svelte:component this={Contrast} slot="icon" />
-		</NavItem>
+	<BottomSheetTrigger>
+		<NavTrigger />
+	</BottomSheetTrigger>
+	<BottomSheetContent>
+		<NavContent>
+			<NavItem href="/home" label="home">
+				<svelte:fragment slot="shortcut">^ 1</svelte:fragment>
+				<svelte:component this={Home} slot="icon" />
+			</NavItem>
+			<NavItem href="/projects" label="projects">
+				<svelte:fragment slot="shortcut">^ 2</svelte:fragment>
+				<svelte:component this={Lightbulb} slot="icon" />
+			</NavItem>
+			<NavItem href="/blog" label="blog">
+				<svelte:fragment slot="shortcut">^ 3</svelte:fragment>
+				<svelte:component this={Pencil} slot="icon" />
+			</NavItem>
+			<NavItem href="/settings" label="settings">
+				<svelte:fragment slot="shortcut">^ 4</svelte:fragment>
+				<svelte:component this={Contrast} slot="icon" />
+			</NavItem>
+			<svelte:fragment slot="socials">
+				<div>github</div>
+				<div>twitter</div>
+				<div>linked in</div>
+			</svelte:fragment>
+		</NavContent>
 	</BottomSheetContent>
 </BottomSheet>

@@ -1,11 +1,7 @@
 <script lang="ts">
-	import type { SvelteComponent } from 'svelte';
-
 	import { sheet, blur } from '~/lib/transitions/index';
 
 	import { getBottomSheetContext } from './BottomSheet.svelte';
-
-	export let as: new (...args: any[]) => SvelteComponent;
 
 	let bottomSheetElement: HTMLElement;
 	let isDragging = false;
@@ -84,9 +80,7 @@
 		in:sheet
 		out:sheet={{ duration: 100, initialY: shiftYPercentage }}
 	>
-		<svelte:component this={as}>
-			<slot />
-		</svelte:component>
+		<slot />
 	</footer>
 	<div
 		class="bottom-sheet-mask"

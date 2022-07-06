@@ -5,6 +5,12 @@
 	<div class="nav-sheet-items">
 		<slot />
 	</div>
+
+	<h3>Socials</h3>
+
+	<div class="nav-sheet-socials">
+		<slot name="socials" />
+	</div>
 </div>
 
 <style>

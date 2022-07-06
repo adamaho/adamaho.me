@@ -16,8 +16,8 @@
 
 <div class="welcome" on:animationend={handleAnimationEnd}>
 	<div class="welcome-heading" class:welcome-heading-out={isUnlocked}>
-		<h1>welcome</h1>
-		<span>thanks for stopping by 😀</span>
+		<h1>Welcome</h1>
+		<span>Thanks for stopping by 😀</span>
 	</div>
 	<div class="welcome-unlock" class:welcome-unlock-out={isUnlocked}>
 		<SlideToUnlock on:unlock={handleUnlock} />
