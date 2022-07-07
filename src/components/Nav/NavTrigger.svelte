@@ -1,10 +1,13 @@
 <script lang="ts">
+	import { BottomSheetTrigger } from '~/lib/components/BottomSheet';
 	import ArrowUp from '~/lib/components/Icons/ArrowUp.svelte';
 </script>
 
-<button class="nav-trigger" on:click>
-	<svelte:component this={ArrowUp} />
-</button>
+<BottomSheetTrigger>
+	<button class="nav-trigger" on:click>
+		<svelte:component this={ArrowUp} />
+	</button>
+</BottomSheetTrigger>
 
 <style>
 	.nav-trigger {

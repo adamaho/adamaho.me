@@ -1,21 +1,15 @@
 <script lang="ts">
 	import { goto } from '$app/navigation';
+	import { onDestroy, onMount } from 'svelte';
 
 	import { shortcuts } from '~/stores/shortcuts';
 	import { KeyCodes } from '~/constants/keycodes';
 
-	import {
-		BottomSheet,
-		BottomSheetContent,
-		BottomSheetTrigger
-	} from '~/lib/components/BottomSheet';
-
-	import { Contrast, Home, Lightbulb, Pencil } from '~/lib/components/Icons';
+	import { BottomSheet } from '~/lib/components/BottomSheet';
 
 	import NavContent from './NavContent.svelte';
-	import NavItem from './NavItem.svelte';
+
 	import NavTrigger from './NavTrigger.svelte';
-	import { onDestroy, onMount } from 'svelte';
 
 	const NAV_SHORTCUTS = [
 		{ key: KeyCodes.One, route: '/home' },
@@ -42,32 +36,6 @@
 </script>
 
 <BottomSheet>
-	<BottomSheetTrigger>
-		<NavTrigger />
-	</BottomSheetTrigger>
-	<BottomSheetContent>
-		<NavContent>
-			<NavItem href="/home" label="home">
-				<svelte:fragment slot="shortcut">^ 1</svelte:fragment>
-				<svelte:component this={Home} slot="icon" />
-			</NavItem>
-			<NavItem href="/projects" label="projects">
-				<svelte:fragment slot="shortcut">^ 2</svelte:fragment>
-				<svelte:component this={Lightbulb} slot="icon" />
-			</NavItem>
-			<NavItem href="/blog" label="blog">
-				<svelte:fragment slot="shortcut">^ 3</svelte:fragment>
-				<svelte:component this={Pencil} slot="icon" />
-			</NavItem>
-			<NavItem href="/settings" label="settings">
-				<svelte:fragment slot="shortcut">^ 4</svelte:fragment>
-				<svelte:component this={Contrast} slot="icon" />
-			</NavItem>
-			<svelte:fragment slot="socials">
-				<div>github</div>
-				<div>twitter</div>
-				<div>linked in</div>
-			</svelte:fragment>
-		</NavContent>
-	</BottomSheetContent>
+	<NavTrigger />
+	<NavContent />
 </BottomSheet>

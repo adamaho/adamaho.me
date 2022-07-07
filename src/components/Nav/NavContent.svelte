@@ -1,17 +1,58 @@
-<div class="nav-sheet-container">
-	<div class="nav-sheet-header">
-		<div class="nav-sheet-header-thumb" />
-	</div>
-	<div class="nav-sheet-items">
-		<slot />
-	</div>
+<script lang="ts">
+	import { BottomSheetContent } from '~/lib/components/BottomSheet';
+	import {
+		Contrast,
+		Github,
+		Home,
+		Lightbulb,
+		Pencil,
+		Twitter,
+		LinkedIn
+	} from '~/lib/components/Icons';
 
-	<h3>Socials</h3>
+	import NavItem from './NavItem.svelte';
+	import NavSocialItem from './NavSocialItem.svelte';
+</script>
 
-	<div class="nav-sheet-socials">
-		<slot name="socials" />
+<BottomSheetContent>
+	<div class="nav-sheet-container">
+		<div class="nav-sheet-header">
+			<div class="nav-sheet-header-thumb" />
+		</div>
+		<div class="nav-sheet-items">
+			<NavItem href="/home" label="Home">
+				<svelte:fragment slot="shortcut">^ 1</svelte:fragment>
+				<svelte:component this={Home} slot="icon" />
+			</NavItem>
+			<NavItem href="/projects" label="Projects">
+				<svelte:fragment slot="shortcut">^ 2</svelte:fragment>
+				<svelte:component this={Lightbulb} slot="icon" />
+			</NavItem>
+			<NavItem href="/blog" label="Blog">
+				<svelte:fragment slot="shortcut">^ 3</svelte:fragment>
+				<svelte:component this={Pencil} slot="icon" />
+			</NavItem>
+			<NavItem href="/settings" label="Settings">
+				<svelte:fragment slot="shortcut">^ 4</svelte:fragment>
+				<svelte:component this={Contrast} slot="icon" />
+			</NavItem>
+		</div>
+		<div class="nav-sheet-socials">
+			<h3>Socials</h3>
+			<div class="nav-sheet-socials-items">
+				<NavSocialItem href="https://github.com/adamaho" label="Github">
+					<Github />
+				</NavSocialItem>
+				<NavSocialItem href="https://twitter.com/theadamaho" label="Twitter">
+					<Twitter />
+				</NavSocialItem>
+				<NavSocialItem href="https://www.linkedin.com/in/adamaho/" label="LinkedIn">
+					<LinkedIn />
+				</NavSocialItem>
+			</div>
+		</div>
 	</div>
-</div>
+</BottomSheetContent>
 
 <style>
 	.nav-sheet-container {
@@ -41,6 +82,18 @@
 		grid-template-rows: auto;
 		padding: var(--aho-space-small);
 		padding-top: 0;
+	}
+
+	.nav-sheet-socials {
+		padding: var(--aho-space-small);
+		padding-top: var(--aho-space-medium);
+	}
+
+	.nav-sheet-socials-items {
+		display: flex;
+		flex-direction: column;
+		gap: var(--aho-space-small);
+		margin-top: var(--aho-space-small);
 	}
 
 	@media screen and (min-width: 640px) {

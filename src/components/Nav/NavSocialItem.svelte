@@ -2,6 +2,7 @@
 	import { createEventDispatcher } from 'svelte';
 
 	import { getBottomSheetContext } from '~/lib/components/BottomSheet/BottomSheet.svelte';
+	import { ExternalLink } from '~/lib/components/Icons';
 
 	export let href: string;
 	export let label: string;
@@ -21,30 +22,36 @@
 	}
 </script>
 
-<a {href} class="nav-item" on:click={handleClick} aria-label={`go to ${label}`}>
-	<div class="nav-item-shortcut">
-		<slot name="shortcut" />
+<a
+	{href}
+	class="nav-social-item"
+	on:click={handleClick}
+	aria-label={`open ${label}`}
+	target="_blank"
+>
+	<div class="nav-social-item-content">
+		<div class="nav-social-item-icon">
+			<slot />
+		</div>
+		<span class="nav-social-item-text">
+			{label}
+		</span>
 	</div>
-	<div class="nav-item-icon">
-		<slot name="icon" class="nav-item-icon" />
+	<div class="nav-social-item-external-link">
+		<ExternalLink />
 	</div>
-	<span class="nav-item-text">
-		{label}
-	</span>
 </a>
 
 <style>
-	.nav-item {
+	.nav-social-item {
 		align-items: center;
 		background-color: rgba(var(--aho-color-grey10), 0.5);
 		border: 0;
 		border-radius: var(--aho-radii-medium);
 		display: flex;
-		flex-direction: column;
-		font-size: var(--aho-font-size-smedium);
 		gap: var(--aho-space-xsmall);
 		justify-content: space-between;
-		padding: var(--aho-space-small);
+		padding: var(--aho-space-smedium);
 		position: relative;
 		text-decoration: none;
 		transition: background-color var(--aho-animation-speed-fast) ease;
@@ -52,46 +59,46 @@
 		width: 100%;
 	}
 
-	.nav-item:hover {
+	.nav-social-item:hover {
 		background-color: rgba(var(--aho-color-grey10), 0.7);
 	}
 
-	.nav-item-shortcut {
-		color: rgb(var(--aho-color-grey60));
-		display: none;
-		font-family: var(--aho-font-family-body);
-		position: absolute;
-		right: var(--aho-space-small);
-		top: var(--aho-space-xsmall);
+	.nav-social-item-content {
+		align-items: center;
+		display: flex;
+		gap: var(--aho-space-small);
 	}
 
-	.nav-item-icon {
-		height: var(--aho-space-3xlarge);
-		width: var(--aho-space-3xlarge);
+	.nav-social-item-icon {
+		color: rgb(var(--aho-color-grey80));
+		height: var(--aho-space-large);
+		width: var(--aho-space-large);
 	}
 
-	.nav-item-text {
+	.nav-social-item-text {
 		color: rgb(var(--aho-color-grey70));
+		font-size: var(--aho-font-size-medium);
 	}
 
-	:global(.nav-item:hover .nav-item-icon > svg) {
+	:global(.nav-social-item:hover .nav-social-item-icon > svg) {
 		transform: scale(var(--aho-scale-xlarge));
 	}
 
-	:global(.nav-item-icon > svg) {
+	:global(.nav-social-item-icon > svg) {
 		height: 100%;
 		transition: transform var(--aho-animation-speed-fast) ease;
 		will-change: transform;
 		width: 100%;
 	}
 
-	@media screen and (min-width: 640px) {
-		.nav-item {
-			padding-top: var(--aho-space-2xlarge);
-		}
+	.nav-social-item-external-link {
+		color: rgb(var(--aho-color-grey70));
+		height: var(--aho-space-large);
+		width: var(--aho-space-large);
+	}
 
-		.nav-item-shortcut {
-			display: block;
-		}
+	:global(.nav-social-item-external-link > svg) {
+		height: 100%;
+		width: 100%;
 	}
 </style>
