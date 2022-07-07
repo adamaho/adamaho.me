@@ -38,7 +38,7 @@
 			</NavItem>
 		</div>
 		<div class="nav-sheet-socials">
-			<h3>Socials</h3>
+			<h3 class="nav-sheet-socials-title">Socials</h3>
 			<div class="nav-sheet-socials-items">
 				<NavSocialItem href="https://github.com/adamaho" label="Github">
 					<Github />
@@ -87,6 +87,10 @@
 	.nav-sheet-socials {
 		padding: var(--aho-space-small);
 		padding-top: var(--aho-space-medium);
+	}
+
+	.nav-sheet-socials-title {
+		color: rgb(var(--aho-color-grey80));
 	}
 
 	.nav-sheet-socials-items {
