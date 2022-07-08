@@ -21,19 +21,15 @@
 		</div>
 		<div class="nav-sheet-items">
 			<NavItem href="/home" label="Home">
-				<svelte:fragment slot="shortcut">^ 1</svelte:fragment>
 				<svelte:component this={Home} slot="icon" />
 			</NavItem>
 			<NavItem href="/projects" label="Projects">
-				<svelte:fragment slot="shortcut">^ 2</svelte:fragment>
 				<svelte:component this={Lightbulb} slot="icon" />
 			</NavItem>
 			<NavItem href="/blog" label="Blog">
-				<svelte:fragment slot="shortcut">^ 3</svelte:fragment>
 				<svelte:component this={Pencil} slot="icon" />
 			</NavItem>
-			<NavItem href="/settings" label="Settings">
-				<svelte:fragment slot="shortcut">^ 4</svelte:fragment>
+			<NavItem href="/preferences" label="Preferences">
 				<svelte:component this={Contrast} slot="icon" />
 			</NavItem>
 		</div>
@@ -80,17 +76,17 @@
 		gap: var(--aho-space-small);
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto;
-		padding: var(--aho-space-small);
-		padding-top: 0;
+		padding: var(--aho-space-large);
 	}
 
 	.nav-sheet-socials {
-		padding: var(--aho-space-small);
+		padding: var(--aho-space-large);
 		padding-top: var(--aho-space-medium);
 	}
 
 	.nav-sheet-socials-title {
 		color: rgb(var(--aho-color-grey80));
+		padding-left: var(--aho-space-smedium);
 	}
 
 	.nav-sheet-socials-items {
@@ -102,10 +98,6 @@
 
 	@media screen and (min-width: 640px) {
 		.nav-sheet-header {
-			padding: var(--aho-space-xsmall);
-		}
-
-		.nav-sheet-header-thumb {
 			display: none;
 		}
 

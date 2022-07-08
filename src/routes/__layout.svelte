@@ -32,6 +32,7 @@
 		font-size: var(--aho-font-size-medium);
 		font-weight: var(--aho-font-weight-thin);
 		margin: 0;
+		height: 100vh;
 		min-height: 100vh;
 		min-height: -webkit-fill-available;
 		--webkit-font-smoothing: 'antialiased';
@@ -80,5 +81,15 @@
 		font-weight: var(--aho-font-weight-normal);
 		padding-bottom: var(--aho-space-xxsmall);
 		text-decoration: none;
+	}
+
+	.separator {
+		background-color: var(--aho-colors-separator);
+		border: 0;
+		height: var(--aho-space-px);
+		margin: 0;
+		margin-top: var(--aho-space-2xlarge);
+		margin-bottom: var(--aho-space-large);
+		width: var(--aho-space-6xlarge);
 	}
 </style>

@@ -1,20 +1,21 @@
-<!-- <script lang="ts">
-	import cx from 'clsx';
-
+<script lang="ts">
 	import { fly } from 'svelte/transition';
 
-	export let pathname: string;
-
-	let className: string = '';
-	export { className as class };
+	export let url: URL;
 </script>
 
-{#key pathname}
+{#key url}
 	<div
-		in:fly={{ y: -25, duration: 250, delay: 300 }}
-		out:fly={{ y: 0, duration: 250 }}
-		class={cx(className)}
+		in:fly={{ y: -10, duration: 200, delay: 300 }}
+		out:fly={{ y: 0, duration: 200 }}
+		class="page"
 	>
 		<slot />
 	</div>
-{/key} -->
+{/key}
+
+<style>
+	.page {
+		height: 100%;
+	}
+</style>

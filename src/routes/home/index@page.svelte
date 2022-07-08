@@ -9,16 +9,6 @@
 </p>
 
 <style>
-	.separator {
-		background-color: var(--aho-colors-separator);
-		border: 0;
-		height: var(--aho-space-px);
-		margin: 0;
-		margin-top: var(--aho-space-2xlarge);
-		margin-bottom: var(--aho-space-large);
-		width: var(--aho-space-6xlarge);
-	}
-
 	.shpeel {
 		line-height: 2;
 	}

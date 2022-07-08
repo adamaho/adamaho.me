@@ -1,11 +1,22 @@
-<script lang="ts">
-	import Nav from '~/components/Nav';
+<script context="module" lang="ts">
+	import type { Load } from '@sveltejs/kit';
+
+	export const load: Load = async ({ url }) => ({ props: { url } });
 </script>
 
-<main class="site-layout">
-	<Nav />
-	<slot />
-</main>
+<script lang="ts">
+	import Nav from '~/components/Nav';
+	import PageTransition from '~/lib/components/PageTransition.svelte';
+
+	export let url: URL;
+</script>
+
+<PageTransition {url}>
+	<main class="site-layout">
+		<slot />
+	</main>
+</PageTransition>
+<Nav />
 
 <style>
 	.site-layout {

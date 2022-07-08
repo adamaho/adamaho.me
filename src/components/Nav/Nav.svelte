@@ -15,7 +15,7 @@
 		{ key: KeyCodes.One, route: '/home' },
 		{ key: KeyCodes.Two, route: '/projects' },
 		{ key: KeyCodes.Three, route: '/blog' },
-		{ key: KeyCodes.Four, route: '/settings' }
+		{ key: KeyCodes.Four, route: '/preferences' }
 	];
 
 	// When the component mounts, add the shortcut listeners

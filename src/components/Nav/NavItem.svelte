@@ -22,9 +22,6 @@
 </script>
 
 <a {href} class="nav-item" on:click={handleClick} aria-label={`go to ${label}`}>
-	<div class="nav-item-shortcut">
-		<slot name="shortcut" />
-	</div>
 	<div class="nav-item-icon">
 		<slot name="icon" class="nav-item-icon" />
 	</div>
@@ -56,15 +53,6 @@
 		background-color: rgba(var(--aho-color-grey10), 0.7);
 	}
 
-	.nav-item-shortcut {
-		color: rgb(var(--aho-color-grey60));
-		display: none;
-		font-family: var(--aho-font-family-body);
-		position: absolute;
-		right: var(--aho-space-small);
-		top: var(--aho-space-xsmall);
-	}
-
 	.nav-item-icon {
 		height: var(--aho-space-3xlarge);
 		width: var(--aho-space-3xlarge);
@@ -75,7 +63,7 @@
 	}
 
 	:global(.nav-item:hover .nav-item-icon > svg) {
-		transform: scale(var(--aho-scale-xlarge));
+		transform: scale(var(--aho-scale-large));
 	}
 
 	:global(.nav-item-icon > svg) {
@@ -83,15 +71,5 @@
 		transition: transform var(--aho-animation-speed-fast) ease;
 		will-change: transform;
 		width: 100%;
-	}
-
-	@media screen and (min-width: 640px) {
-		.nav-item {
-			padding-top: var(--aho-space-2xlarge);
-		}
-
-		.nav-item-shortcut {
-			display: block;
-		}
 	}
 </style>
