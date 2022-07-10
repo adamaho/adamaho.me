@@ -78,7 +78,10 @@
 	}
 
 	.color-input {
-		display: none;
+		position: absolute;
+		opacity: 0;
+		top: -9999px;
+		left: -9999px;
 	}
 
 	.color-bubble {
