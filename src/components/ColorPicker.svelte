@@ -1,10 +1,10 @@
 <script lang="ts">
+	import { ColorVars } from '~/stores/theme';
+
 	export let colors: string[];
 	export let cssVar: string;
 	export let defaultColor: string;
-	export let name: string;
-
-	const LOCAL_STORAGE_KEY = `${name}Color`;
+	export let name: keyof typeof ColorVars;
 
 	let colorPickerEl: HTMLElement;
 	let colorEls: { [key: string]: HTMLElement } = {};
@@ -16,14 +16,14 @@
 	 * @param color
 	 */
 	function saveColorToLocalStorage(color: string) {
-		localStorage.setItem(LOCAL_STORAGE_KEY, color);
+		localStorage.setItem(ColorVars[name], color);
 	}
 
 	/**
 	 * Gets the color from local storage if it exits else it returns the defaultColor
 	 */
 	function getColorFromLocalStorage() {
-		return localStorage.getItem(LOCAL_STORAGE_KEY) || defaultColor;
+		return localStorage.getItem(ColorVars[name]) || defaultColor;
 	}
 
 	$: {

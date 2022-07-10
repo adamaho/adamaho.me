@@ -32,7 +32,7 @@
 	<ColorPicker
 		defaultColor="--aho-color-blue40"
 		cssVar="--aho-colors-brand-primary"
-		name="primary"
+		name="Primary"
 		colors={[
 			'--aho-color-red40',
 			'--aho-color-orange40',
@@ -51,7 +51,7 @@
 	<ColorPicker
 		defaultColor="--aho-color-purple50"
 		cssVar="--aho-colors-brand-secondary"
-		name="secondary"
+		name="Secondary"
 		colors={[
 			'--aho-color-red50',
 			'--aho-color-orange50',

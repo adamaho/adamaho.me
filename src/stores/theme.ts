@@ -6,6 +6,11 @@ export enum Theme {
 	Dark = 'dark'
 }
 
+export enum ColorVars {
+	Primary = 'primaryColor',
+	Secondary = 'secondaryColor'
+}
+
 const LOCAL_STORAGE_THEME_KEY = 'theme';
 
 /**
@@ -41,10 +46,35 @@ function createThemeStore() {
 	}
 
 	/**
+	 * Initializes the colors from localstorage
+	 */
+	function initColors() {
+		if (browser) {
+			// check local storage first
+			const primaryColor = localStorage.getItem(ColorVars.Primary) || '--aho-color-blue40';
+			const secondaryColor =
+				localStorage.getItem(ColorVars.Secondary) || '--aho-color-purple50';
+
+			// set the colors on the document element
+			document.documentElement.style.setProperty(
+				'--aho-colors-brand-primary',
+				`var(${primaryColor})`
+			);
+			document.documentElement.style.setProperty(
+				'--aho-colors-brand-secondary',
+				`var(${secondaryColor})`
+			);
+		}
+	}
+
+	/**
 	 * Initializes the theme. Generally used when the application first loads
 	 */
 	function initTheme() {
 		if (browser) {
+			// init the colors
+			initColors();
+
 			// check local storage first
 			const localStorageTheme = localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as Theme;
 
