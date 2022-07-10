@@ -43,7 +43,7 @@
 	 * Handles the pointer up event
 	 * @param e PointerEvent
 	 */
-	function handlePointerUp(e: PointerEvent) {
+	function handlePointerUp() {
 		if (shiftX < TRACK_WIDTH) {
 			isActive = false;
 			shiftX = INITIAL_SHIFTX;

@@ -15,11 +15,14 @@
 
 <style>
 	.preference {
-		align-items: center;
+		align-items: flex-start;
 		border-bottom: var(--aho-border-width-1) solid var(--aho-colors-border-subtle);
 		display: flex;
+		flex-direction: column;
+		gap: var(--aho-space-large);
 		justify-content: space-between;
 		padding: var(--aho-space-large) 0;
+		width: 100%;
 	}
 
 	.preference:last-child {
@@ -41,5 +44,12 @@
 		color: var(--aho-colors-text-default);
 		font-size: var(--aho-font-size-smedium);
 		margin: 0;
+	}
+
+	@media screen and (min-width: 640px) {
+		.preference {
+			align-items: center;
+			flex-direction: row;
+		}
 	}
 </style>

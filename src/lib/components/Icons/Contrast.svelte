@@ -9,8 +9,8 @@
 		stroke-width="32"
 	/>
 	<path
-		opacity="0.7"
-		fill="rgb(var(--aho-color-grey10))"
+		opacity="0.25"
+		fill="rgb(var(--aho-color-grey50))"
 		d="M256 464c-114.88 0-208-93.12-208-208S141.12 48 256 48z"
 	/>
 </svg>
