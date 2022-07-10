@@ -1,38 +1,51 @@
 <script lang="ts">
 	import { BottomSheetTrigger } from '~/lib/components/BottomSheet';
-	import ArrowUp from '~/lib/components/Icons/ArrowUp.svelte';
+	import { Menu } from '~/lib/components/Icons';
 </script>
 
 <BottomSheetTrigger>
-	<button class="nav-trigger" on:click>
-		<svelte:component this={ArrowUp} />
-	</button>
+	<div class="nav-trigger">
+		<button class="nav-trigger-button" on:click>
+			<svelte:component this={Menu} />
+		</button>
+	</div>
 </BottomSheetTrigger>
 
 <style>
 	.nav-trigger {
 		align-items: center;
+		backdrop-filter: blur(5px);
+		-webkit-backdrop-filter: blur(5px);
+		border-radius: var(--aho-radii-round);
+		bottom: var(--aho-space-xlarge);
+		display: flex;
+		justify-content: center;
+		left: 50%;
+		height: 72px;
+		position: fixed;
+		transform: translate(-50%);
+		width: 72px;
+	}
+
+	.nav-trigger-button {
+		align-items: center;
 		background: var(--aho-colors-gradients-brand);
 		border: none;
 		border-radius: 50%;
-		bottom: var(--aho-space-xlarge);
 		color: rgb(var(--aho-color-grey10));
 		cursor: pointer;
 		display: flex;
 		height: var(--aho-space-5xlarge);
 		justify-content: center;
-		left: 50%;
-		position: fixed;
-		transform: translate(-50%);
 		transition: transform var(--aho-animation-speed-fast) ease;
 		width: var(--aho-space-5xlarge);
 	}
 
-	.nav-trigger:hover {
-		transform: translate(-50%) scale(var(--aho-scale-large));
+	.nav-trigger-button:hover {
+		transform: scale(var(--aho-scale-large));
 	}
 
-	:global(.nav-trigger > svg) {
+	:global(.nav-trigger-button > svg) {
 		height: var(--aho-space-xlarge);
 		width: var(--aho-space-xlarge);
 	}

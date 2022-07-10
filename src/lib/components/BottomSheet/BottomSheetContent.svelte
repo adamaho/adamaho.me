@@ -61,7 +61,7 @@
 	function handlePointerUp() {
 		isDragging = false;
 
-		if (shiftYPercentage >= -50) {
+		if (shiftYPercentage >= -80) {
 			context.setIsOpen(false);
 		}
 
