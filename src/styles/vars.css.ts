@@ -47,7 +47,8 @@ export const theme = createGlobalThemeContract(
 				secondary: ''
 			},
 			background: {
-				site: ''
+				site: '',
+				widget: ''
 			},
 			border: {
 				subtle: ''
@@ -77,7 +78,8 @@ createGlobalTheme('html[data-theme="dark"]', theme, {
 			secondary: baseVars.color.purple50
 		},
 		background: {
-			site: baseVars.color.grey100
+			site: baseVars.color.grey100,
+			widget: baseVars.color.grey80
 		},
 		border: {
 			subtle: `rgb(${baseVars.color.grey80})`
@@ -109,7 +111,8 @@ createGlobalTheme('html[data-theme="light"]', theme, {
 			secondary: baseVars.color.purple50
 		},
 		background: {
-			site: baseVars.color.grey10
+			site: baseVars.color.grey10,
+			widget: baseVars.color.grey30
 		},
 		border: {
 			subtle: `rgb(${baseVars.color.grey30})`

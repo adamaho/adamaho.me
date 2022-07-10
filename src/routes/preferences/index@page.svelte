@@ -1,13 +1,18 @@
 <script lang="ts">
-	import { theme } from '~/stores/theme';
+	import { Theme, theme } from '~/stores/theme';
 
+	import Switch from '~/lib/components/Switch.svelte';
 	import Preference from '~/components/Preference.svelte';
 	import ColorPicker from '~/components/ColorPicker.svelte';
 
-	let value = $theme.theme;
+	let isDarkMode: boolean = $theme.theme === Theme.Dark;
 
 	$: {
-		theme.setTheme(value);
+		if (isDarkMode) {
+			theme.setTheme(Theme.Dark);
+		} else {
+			theme.setTheme(Theme.Light);
+		}
 	}
 </script>
 
@@ -23,7 +28,7 @@
 	<svelte:fragment slot="description">
 		When on, the interface color scheme will be dark.
 	</svelte:fragment>
-	<button>hello</button>
+	<Switch bind:checked={isDarkMode} />
 </Preference>
 
 <Preference>
