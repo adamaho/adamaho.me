@@ -23,9 +23,9 @@
 			<NavItem href="/home" label="Home">
 				<svelte:component this={Home} slot="icon" />
 			</NavItem>
-			<NavItem href="/projects" label="Projects">
+			<!-- <NavItem href="/projects" label="Projects">
 				<svelte:component this={Lightbulb} slot="icon" />
-			</NavItem>
+			</NavItem> -->
 			<NavItem href="/blog" label="Blog">
 				<svelte:component this={Pencil} slot="icon" />
 			</NavItem>
@@ -74,7 +74,7 @@
 	.nav-sheet-items {
 		display: grid;
 		gap: var(--aho-space-small);
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: auto;
 		padding: var(--aho-space-large);
 	}
@@ -102,7 +102,7 @@
 		}
 
 		.nav-sheet-items {
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(3, 1fr);
 		}
 	}
 </style>
