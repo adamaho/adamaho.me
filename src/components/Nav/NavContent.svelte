@@ -23,11 +23,8 @@
 			<NavItem href="/home" label="Home">
 				<svelte:component this={Home} slot="icon" />
 			</NavItem>
-			<!-- <NavItem href="/projects" label="Projects">
+			<NavItem href="/writing" label="Writing">
 				<svelte:component this={Lightbulb} slot="icon" />
-			</NavItem> -->
-			<NavItem href="/blog" label="Blog">
-				<svelte:component this={Pencil} slot="icon" />
 			</NavItem>
 			<NavItem href="/preferences" label="Preferences">
 				<svelte:component this={Contrast} slot="icon" />

@@ -25,6 +25,7 @@
 		position: fixed;
 		transform: translate(-50%);
 		width: 72px;
+		z-index: 2;
 	}
 
 	.nav-trigger-button {

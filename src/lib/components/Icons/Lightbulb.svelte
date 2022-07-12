@@ -1,4 +1,8 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+<script lang="ts">
+	export let filamentColor = '--aho-color-grey10';
+</script>
+
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" on:click>
 	<path
 		d="M8 20C8 19.4477 8.44772 19 9 19H15C15.5523 19 16 19.4477 16 20V21C16 22.6569 14.6569 24 13 24H11C9.34315 24 8 22.6569 8 21V20Z"
 		fill="rgb(var(--aho-color-grey10))"
@@ -10,6 +14,6 @@
 	/>
 	<path
 		d="M10.7071 8.29289C10.3166 7.90237 9.68342 7.90237 9.29289 8.29289C8.90237 8.68342 8.90237 9.31658 9.29289 9.70711L11 11.4142V17H13V11.4142L14.7071 9.70711C15.0976 9.31658 15.0976 8.68342 14.7071 8.29289C14.3166 7.90237 13.6834 7.90237 13.2929 8.29289L12 9.58579L10.7071 8.29289Z"
-		fill="rgb(var(--aho-color-grey10))"
+		fill={`rgb(var(${filamentColor}))`}
 	/>
 </svg>
