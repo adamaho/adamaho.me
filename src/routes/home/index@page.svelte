@@ -1,5 +1,11 @@
-<h1>Adam Aho</h1>
-<p>Design System Engineer</p>
+<script lang="ts">
+	import PageHeading from '~/components/PageHeading.svelte';
+</script>
+
+<PageHeading>
+	<svelte:fragment slot="title">Adam Aho</svelte:fragment>
+	<svelte:fragment slot="description">Design System Engineer</svelte:fragment>
+</PageHeading>
 
 <hr class="separator" />
 

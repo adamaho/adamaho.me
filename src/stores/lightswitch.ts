@@ -1,9 +1,9 @@
 import { writable } from 'svelte/store';
 
-function createLightbulStore() {
+function createLightSwitchStore() {
 	const { subscribe, update, set } = writable(false);
 
-	function toggleLightbulb() {
+	function toggleLightswitch() {
 		update((c) => !c);
 	}
 
@@ -11,8 +11,8 @@ function createLightbulStore() {
 		subscribe,
 		update,
 		set,
-		toggleLightbulb
+		toggleLightswitch
 	};
 }
 
-export const lightbulb = createLightbulStore();
+export const lightswitch = createLightSwitchStore();

@@ -59,6 +59,9 @@ export const theme = createGlobalThemeContract(
 			heading: {
 				default: ''
 			},
+			icon: {
+				default: ''
+			},
 			link: {
 				default: ''
 			},
@@ -94,6 +97,9 @@ createGlobalTheme('html[data-theme="dark"]', theme, {
 		heading: {
 			default: `rgb(${baseVars.color.grey10})`
 		},
+		icon: {
+			default: baseVars.color.grey30
+		},
 		link: {
 			default: `rgb(${baseVars.color.grey20})`
 		},
@@ -126,6 +132,9 @@ createGlobalTheme('html[data-theme="light"]', theme, {
 		},
 		heading: {
 			default: `rgb(${baseVars.color.grey100})`
+		},
+		icon: {
+			default: baseVars.color.grey30
 		},
 		link: {
 			default: `rgb(${baseVars.color.grey90})`

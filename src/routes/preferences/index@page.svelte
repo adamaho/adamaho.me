@@ -4,6 +4,7 @@
 	import Switch from '~/lib/components/Switch.svelte';
 	import Preference from '~/components/Preference.svelte';
 	import ColorPicker from '~/components/ColorPicker.svelte';
+	import PageHeading from '~/components/PageHeading.svelte';
 
 	let isDarkMode: boolean = $theme.theme === Theme.Dark;
 
@@ -16,10 +17,10 @@
 	}
 </script>
 
-<h1>Preferences</h1>
-<p>Manage your preferences</p>
-
-<hr class="separator" />
+<PageHeading>
+	<svelte:fragment slot="title">Preferences</svelte:fragment>
+	<svelte:fragment slot="description">Manage your preferences</svelte:fragment>
+</PageHeading>
 
 <h3 class="preference-page-title">Theme</h3>
 
