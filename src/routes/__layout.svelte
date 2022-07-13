@@ -33,6 +33,7 @@
 		font-weight: var(--aho-font-weight-thin);
 		margin: 0;
 		height: 100vh;
+		overflow-x: hidden;
 		min-height: 100vh;
 		min-height: -webkit-fill-available;
 		--webkit-font-smoothing: 'antialiased';

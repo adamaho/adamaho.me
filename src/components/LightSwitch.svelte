@@ -23,7 +23,7 @@
 
 <style>
 	.lightswitch {
-		position: fixed;
+		position: absolute;
 		top: var(--aho-space-large);
 	}
 
