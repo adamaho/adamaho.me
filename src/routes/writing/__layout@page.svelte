@@ -11,6 +11,7 @@
 
 <style>
 	.writing-page {
+		position: relative;
 		opacity: 0.2;
 		transition: opacity var(--aho-animation-speed-fast) ease;
 	}

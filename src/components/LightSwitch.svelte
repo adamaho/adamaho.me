@@ -9,7 +9,6 @@
 	<div class="lightswitch-cord" />
 	<div class="lightswitch-bulb">
 		{#if $lightswitch}
-			<div class="lightswitch-fade" in:fade={{ duration: 100 }} />
 			<div class="lightswitch-light" in:fade={{ duration: 100 }} />
 		{/if}
 		<svelte:component
@@ -20,11 +19,14 @@
 		/>
 	</div>
 </div>
+{#if $lightswitch}
+	<div class="lightswitch-fade" in:fade={{ duration: 100 }} />
+{/if}
 
 <style>
 	.lightswitch {
 		position: absolute;
-		top: var(--aho-space-large);
+		top: -46px;
 	}
 
 	.lightswitch-cord {
@@ -37,7 +39,7 @@
 		height: var(--aho-space-3xlarge);
 		justify-content: center;
 		position: relative;
-		width: var(--aho-space-2xlarge);
+		width: var(--aho-space-3xlarge);
 	}
 
 	:global(.lightswitch-bulb > svg) {
@@ -49,18 +51,24 @@
 	.lightswitch-light {
 		background: radial-gradient(rgba(var(--aho-colors-brand-primary), 0.15), transparent 50%);
 		border-radius: var(--aho-radii-round);
-		height: 600px;
+		height: 480px;
 		position: absolute;
-		width: 600px;
+		width: 480px;
 		z-index: -1;
 	}
 
 	.lightswitch-fade {
-		background: radial-gradient(rgba(var(--aho-colors-brand-primary), 0.1), transparent 70%);
-		border-radius: var(--aho-radii-round);
-		height: 2500px;
-		position: absolute;
-		width: 2500px;
+		background: linear-gradient(
+			to bottom right,
+			rgba(var(--aho-colors-brand-primary), 0.2),
+			transparent 60%
+		);
+		border-bottom-right-radius: var(--aho-radii-round);
+		height: 100%;
+		position: fixed;
+		width: 100%;
+		left: 0;
+		top: 0;
 		z-index: -1;
 	}
 
