@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { fly } from 'svelte/transition';
 	import { BottomSheetTrigger } from '~/lib/components/BottomSheet';
 	import { Menu } from '~/lib/components/Icons';
 </script>
 
 <BottomSheetTrigger>
-	<div class="nav-trigger">
+	<div class="nav-trigger" in:fly={{ y: 50 }}>
 		<button class="nav-trigger-button" on:click>
 			<svelte:component this={Menu} />
 		</button>
