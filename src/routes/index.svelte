@@ -14,6 +14,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Adam Aho - Welcome</title>
+</svelte:head>
+
 <div class="welcome" on:animationend={handleAnimationEnd}>
 	<div class="welcome-heading" class:welcome-heading-out={isUnlocked}>
 		<h1>Welcome</h1>

@@ -17,8 +17,7 @@
 	}
 </script>
 
-<PageHeading>
-	<svelte:fragment slot="title">Preferences</svelte:fragment>
+<PageHeading title="Preferences" tabTitle="Preferences">
 	<svelte:fragment slot="description">Manage your preferences</svelte:fragment>
 </PageHeading>
 

@@ -1,5 +1,14 @@
+<script lang="ts">
+	export let title = '';
+	export let tabTitle = '';
+</script>
+
+<svelte:head>
+	<title>Adam Aho - {tabTitle}</title>
+</svelte:head>
+
 <h1>
-	<slot name="title" />
+	{title}
 </h1>
 <p>
 	<slot name="description" />

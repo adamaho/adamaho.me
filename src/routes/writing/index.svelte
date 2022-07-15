@@ -2,8 +2,7 @@
 	import PageHeading from '~/components/PageHeading.svelte';
 </script>
 
-<PageHeading>
-	<svelte:fragment slot="title">Writing</svelte:fragment>
+<PageHeading title="Writing" tabTitle="Writing">
 	<svelte:fragment slot="description">A place to write things</svelte:fragment>
 </PageHeading>
 
