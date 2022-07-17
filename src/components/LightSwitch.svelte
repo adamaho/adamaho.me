@@ -74,8 +74,8 @@
 
 	@media screen and (min-width: 640px) {
 		.lightswitch {
-			position: fixed;
-			top: 80px;
+			position: absolute;
+			top: -46px;
 		}
 	}
 
