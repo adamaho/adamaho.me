@@ -26,6 +26,9 @@
 			<NavItem href="/writing" label="Writing">
 				<svelte:component this={Lightbulb} slot="icon" />
 			</NavItem>
+			<NavItem href="/bullet" label="Bullet">
+				<svelte:component this={Pencil} slot="icon" />
+			</NavItem>
 			<NavItem href="/preferences" label="Preferences">
 				<svelte:component this={Contrast} slot="icon" />
 			</NavItem>
@@ -49,6 +52,7 @@
 
 <style>
 	.nav-sheet-container {
+		--nav-item-count: 4;
 		background: var(--aho-colors-gradients-brand);
 		border-radius: var(--aho-radii-large);
 		width: 100%;
@@ -71,7 +75,7 @@
 	.nav-sheet-items {
 		display: grid;
 		gap: var(--aho-space-small);
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(calc(var(--nav-item-count) / 2), 1fr);
 		grid-template-rows: auto;
 		padding: var(--aho-space-large);
 	}
@@ -99,7 +103,7 @@
 		}
 
 		.nav-sheet-items {
-			grid-template-columns: repeat(3, 1fr);
+			grid-template-columns: repeat(var(--nav-item-count), 1fr);
 		}
 	}
 </style>
