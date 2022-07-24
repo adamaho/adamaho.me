@@ -105,7 +105,7 @@
 		max-width: var(--bottom-sheet-max-width);
 		width: 100%;
 		will-change: transform;
-		z-index: 2;
+		z-index: 5;
 	}
 
 	.bottom-sheet-mask {
@@ -117,6 +117,6 @@
 		position: absolute;
 		top: 0;
 		width: 100%;
-		z-index: 1;
+		z-index: 4;
 	}
 </style>

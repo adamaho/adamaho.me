@@ -14,6 +14,7 @@
 		position: relative;
 		opacity: 0.2;
 		transition: opacity var(--aho-animation-speed-fast) ease;
+		z-index: 3;
 	}
 
 	.writing-page.lightswitch-on {

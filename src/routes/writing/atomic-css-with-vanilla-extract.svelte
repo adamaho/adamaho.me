@@ -1,15 +1,44 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
+	import Codeblock from '~/components/Codeblock.svelte';
 
 	import PageHeading from '~/components/PageHeading.svelte';
 </script>
 
-<PageHeading title="Atomic CSS with Vanilla Extract">
-	<svelte:fragment slot="description"
-		>{dayjs(new Date(2022, 6, 24)).format('MMMM DD, YYYY')}</svelte:fragment
-	>
+<PageHeading title="Atomic CSS with Vanilla Extract" goBackConfig={{ href: '/writing' }}>
+	<svelte:fragment slot="description">
+		{dayjs(new Date(2022, 6, 24)).format('MMMM DD, YYYY')}
+	</svelte:fragment>
 </PageHeading>
 
-<p>this is a really cool thing</p>
+<p>
+	As frontend developers, we have to constantly keep up with the times and innovations in our
+	space. One of the innovations that has come in the last couple years is CSS-in-JS. It has
+	completely changed the way that we work with CSS in our projects. Specifically, React projects.
+</p>
 
-<p>hey what is going on?</p>
+<p>
+	It started with <a href="https://emotion.sh/docs/introduction">emotion</a> and
+	<a href="https://styled-components.com/">styled-components</a>. However, over the years we as a
+	collective community have started to recognize the performance impacts of the dynamic nature of
+	those solutions.
+</p>
+
+<p>
+	Enter, <a href="https://vanilla-extract.style/">Vanilla Extract</a>. A library that provides a
+	lot of the same benefits that emotion and styled-components do, but results in css that is
+	statically compiled at build time. Which means, no dynamic style generation and lookups at
+	runtime. It feels very much like an extension of CSS or CSS modules but written in Typescript.
+</p>
+
+<p>Styling elements using vanilla-extract is easy. Say you have the following jsx.</p>
+
+<!-- <Codeblock
+    code={`
+    const Foo = () => {
+        return (
+            <div>Hello World</div>
+        )
+    }
+    `}
+/> -->

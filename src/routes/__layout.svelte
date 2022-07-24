@@ -65,20 +65,23 @@
 		line-height: 1;
 	}
 
+	h2 {
+		margin-top: var(--aho-space-5xlarge);
+	}
+
 	p,
 	span {
 		color: var(--aho-colors-text-default);
 	}
 
 	p {
-		margin-top: var(--aho-space-small);
+		margin-top: var(--aho-space-large);
 	}
 
 	a {
 		border-bottom: 1px solid var(--aho-colors-border-subtle);
 		color: var(--aho-colors-link-default);
 		font-weight: var(--aho-font-weight-normal);
-		padding-bottom: var(--aho-space-xxsmall);
 		text-decoration: none;
 	}
 

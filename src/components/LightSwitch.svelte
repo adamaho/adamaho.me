@@ -24,6 +24,7 @@
 	.lightswitch {
 		position: absolute;
 		top: -46px;
+		z-index: -1;
 	}
 
 	.lightswitch-cord {
@@ -87,7 +88,7 @@
 			transform-origin: top;
 			position: fixed;
 			top: 0;
-			z-index: 1;
+			z-index: -1;
 		}
 
 		.lightswitch-cord {

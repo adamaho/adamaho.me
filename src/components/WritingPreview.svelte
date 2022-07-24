@@ -50,6 +50,7 @@
 
 	.writing-preview-title {
 		font-size: var(--aho-font-size-large);
+		margin: 0;
 	}
 
 	.writing-preview-snippet {
