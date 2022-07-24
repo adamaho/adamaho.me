@@ -5,7 +5,7 @@
 		Github,
 		Home,
 		Lightbulb,
-		Pencil,
+		// Pencil,
 		Twitter,
 		LinkedIn
 	} from '~/lib/components/Icons';
@@ -26,9 +26,9 @@
 			<NavItem href="/writing" label="Writing">
 				<svelte:component this={Lightbulb} slot="icon" />
 			</NavItem>
-			<NavItem href="/bullet" label="Bullet">
+			<!-- <NavItem href="/bullet" label="Bullet">
 				<svelte:component this={Pencil} slot="icon" />
-			</NavItem>
+			</NavItem> -->
 			<NavItem href="/preferences" label="Preferences">
 				<svelte:component this={Contrast} slot="icon" />
 			</NavItem>
@@ -52,7 +52,7 @@
 
 <style>
 	.nav-sheet-container {
-		--nav-item-count: 4;
+		--nav-item-count: 3;
 		background: var(--aho-colors-gradients-brand);
 		border-radius: var(--aho-radii-large);
 		width: 100%;
@@ -75,7 +75,7 @@
 	.nav-sheet-items {
 		display: grid;
 		gap: var(--aho-space-small);
-		grid-template-columns: repeat(calc(var(--nav-item-count) / 2), 1fr);
+		grid-template-columns: repeat(calc(var(--nav-item-count) / 1), 1fr);
 		grid-template-rows: auto;
 		padding: var(--aho-space-large);
 	}

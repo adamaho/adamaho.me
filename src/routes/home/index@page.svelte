@@ -2,7 +2,7 @@
 	import PageHeading from '~/components/PageHeading.svelte';
 </script>
 
-<PageHeading title="Adam Aho" tabTitle="Home">
+<PageHeading title="Adam Aho">
 	<svelte:fragment slot="description">Design System Engineer</svelte:fragment>
 </PageHeading>
 

@@ -2,7 +2,7 @@
 	import PageHeading from '~/components/PageHeading.svelte';
 </script>
 
-<PageHeading title="Bullet" tabTitle="Bullet">
+<PageHeading title="Bullet">
 	<svelte:fragment slot="description">A place to organize your life.</svelte:fragment>
 </PageHeading>
 

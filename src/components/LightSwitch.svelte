@@ -19,9 +19,6 @@
 		/>
 	</div>
 </div>
-{#if $lightswitch}
-	<div class="lightswitch-fade" in:fade={{ duration: 100 }} />
-{/if}
 
 <style>
 	.lightswitch {
@@ -53,22 +50,8 @@
 		border-radius: var(--aho-radii-round);
 		height: 480px;
 		position: absolute;
+		overflow: hidden;
 		width: 480px;
-		z-index: -1;
-	}
-
-	.lightswitch-fade {
-		background: linear-gradient(
-			to bottom right,
-			rgba(var(--aho-colors-brand-primary), 0.2),
-			transparent 60%
-		);
-		border-bottom-right-radius: var(--aho-radii-round);
-		height: 100%;
-		position: fixed;
-		width: 100%;
-		left: 0;
-		top: 0;
 		z-index: -1;
 	}
 

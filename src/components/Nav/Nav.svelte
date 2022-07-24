@@ -13,9 +13,8 @@
 
 	const NAV_SHORTCUTS = [
 		{ key: KeyCodes.One, route: '/home' },
-		{ key: KeyCodes.Two, route: '/projects' },
-		{ key: KeyCodes.Three, route: '/blog' },
-		{ key: KeyCodes.Four, route: '/preferences' }
+		{ key: KeyCodes.Two, route: '/writing' },
+		{ key: KeyCodes.Three, route: '/preferences' }
 	];
 
 	// When the component mounts, add the shortcut listeners

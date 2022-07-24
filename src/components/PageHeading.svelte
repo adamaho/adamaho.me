@@ -1,10 +1,9 @@
 <script lang="ts">
 	export let title = '';
-	export let tabTitle = '';
 </script>
 
 <svelte:head>
-	<title>Adam Aho - {tabTitle}</title>
+	<title>Adam Aho - {title}</title>
 </svelte:head>
 
 <h1>
