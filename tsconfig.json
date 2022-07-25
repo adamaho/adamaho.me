@@ -16,7 +16,7 @@
 			"~/stores/*": ["src/stores/*"],
 			"~/lib/*": ["src/lib/*"],
 			"~/constants/*": ["src/constants/*"],
-			"~/snippets/*": ["src/snippets/*"],
+			"~/snippets/*": ["src/snippets/*"]
 		}
 	}
 }

@@ -13,7 +13,7 @@ const config = {
 			'~/stores': path.resolve('./src/stores'),
 			'~/lib': path.resolve('./src/lib'),
 			'~/constants': path.resolve('./src/constants'),
-			'~/snippets': path.resolve('./src/snippets'),
+			'~/snippets': path.resolve('./src/snippets')
 		}
 	}
 };
