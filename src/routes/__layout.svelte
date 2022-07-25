@@ -94,4 +94,28 @@
 		margin-bottom: var(--aho-space-large);
 		width: var(--aho-space-6xlarge);
 	}
+
+	code.inline {
+		background-color: rgb(var(--aho-colors-background-widget), 0.4);
+		border-radius: var(--aho-radii-small);
+		color: var(--aho-colors-code-keyword);
+		font-size: var(--aho-font-size-smedium);
+		padding: var(--aho-space-xxsmall) var(--aho-space-small);
+	}
+
+	pre {
+		background-color: rgb(var(--aho-colors-background-widget), 0.4);
+		border-radius: var(--aho-radii-medium);
+		font-size: var(--aho-font-size-smedium);
+		margin: var(--aho-space-large) 0;
+		padding: var(--aho-space-large);
+	}
+
+	.token .keyword {
+		color: var(--aho-colors-code-attr);
+	}
+
+	.token.keyword {
+		color: var(--aho-colors-code-keyword);
+	}
 </style>

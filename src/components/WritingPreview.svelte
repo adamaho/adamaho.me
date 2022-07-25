@@ -29,6 +29,7 @@
 
 <style>
 	.writing-preview {
+		background-color: rgba(var(--aho-colors-background-widget), 0.2);
 		border-bottom: none;
 		border-radius: var(--aho-radii-large);
 		display: flex;
@@ -36,11 +37,11 @@
 		gap: var(--aho-space-small);
 		padding: var(--aho-space-smedium);
 		margin: 0 calc(var(--aho-space-smedium) * -1);
-		transition: background-color var(--aho-animation-speed-medium) ease;
+		transition: transform var(--aho-animation-speed-medium) ease;
 	}
 
 	.writing-preview:hover {
-		background-color: rgba(var(--aho-colors-background-widget), 0.2);
+		transform: scale(var(--aho-scale-small));
 	}
 
 	.writing-preview-date {

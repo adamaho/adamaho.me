@@ -53,6 +53,13 @@ export const theme = createGlobalThemeContract(
 			border: {
 				subtle: ''
 			},
+			code: {
+				attr: '',
+				keyword: '',
+				name: '',
+				property: '',
+				title: ''
+			},
 			gradients: {
 				brand: ''
 			},
@@ -86,6 +93,13 @@ createGlobalTheme('html[data-theme="dark"]', theme, {
 		},
 		border: {
 			subtle: `rgb(${baseVars.color.grey80})`
+		},
+		code: {
+			attr: `rgb(${baseVars.color.purple30})`,
+			keyword: `rgb(${baseVars.color.blue30})`,
+			name: `rgb(${baseVars.color.pink30})`,
+			property: `rgb(${baseVars.color.grey30})`,
+			title: `rgb(${baseVars.color.pink30})`
 		},
 		gradients: {
 			brand: `linear-gradient(
@@ -122,6 +136,13 @@ createGlobalTheme('html[data-theme="light"]', theme, {
 		},
 		border: {
 			subtle: `rgb(${baseVars.color.grey30})`
+		},
+		code: {
+			attr: `rgb(${baseVars.color.purple60})`,
+			keyword: `rgb(${baseVars.color.blue60})`,
+			name: `rgb(${baseVars.color.pink60})`,
+			property: `rgb(${baseVars.color.grey90})`,
+			title: `rgb(${baseVars.color.pink60})`
 		},
 		gradients: {
 			brand: `linear-gradient(

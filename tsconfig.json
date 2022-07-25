@@ -15,7 +15,8 @@
 			"~/components/*": ["src/components/*"],
 			"~/stores/*": ["src/stores/*"],
 			"~/lib/*": ["src/lib/*"],
-			"~/constants/*": ["src/constants/*"]
+			"~/constants/*": ["src/constants/*"],
+			"~/snippets/*": ["src/snippets/*"],
 		}
 	}
 }
