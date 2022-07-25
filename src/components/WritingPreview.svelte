@@ -56,6 +56,10 @@
 
 	.writing-preview-snippet {
 		margin: 0;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
 	}
 
 	.writing-preview-read-more {

@@ -49,9 +49,9 @@
 <Codeblock code={snippets.style} />
 
 <p>
-	So what is happening here? Well, the <code>style</code> function takes the provided style and computes
-	a class and appends the style to the stylesheet. The result, is a class that we can now pass to our
-	svelte button component like so.
+	So what is happening here? Well, the <code class="inline">style</code> function takes the provided
+	style and computes a class and appends the style to the stylesheet. The result, is a class that we
+	can now pass to our svelte button component like so.
 </p>
 
 <Codeblock language="svelte" code={snippets.buttonWithStyle} />
