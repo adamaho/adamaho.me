@@ -4,10 +4,10 @@
 	import Codeblock from '~/components/Codeblock.svelte';
 	import PageHeading from '~/components/PageHeading.svelte';
 
-	import { snippets } from '~/snippets/writing/atomic-css-with-vanilla-extract';
+	import { snippets } from '~/snippets/writing/type-safe-atomic-css';
 </script>
 
-<PageHeading title="Atomic CSS with Vanilla Extract" goBackConfig={{ href: '/writing' }}>
+<PageHeading title="Type-Safe Atomic CSS" goBackConfig={{ href: '/writing' }}>
 	<svelte:fragment slot="description">
 		{dayjs(new Date(2022, 6, 24)).format('MMMM DD, YYYY')}
 	</svelte:fragment>
