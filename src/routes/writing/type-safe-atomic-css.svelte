@@ -80,7 +80,7 @@
 
 <hr class="separator" />
 
-<h2>Type-Safe Atomic CSS</h2>
+<h2>An Alternative Solution</h2>
 
 <p>
 	Vanilla-extract provides a function called <a
