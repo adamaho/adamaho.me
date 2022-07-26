@@ -108,10 +108,43 @@
 		border-radius: var(--aho-radii-medium);
 		font-size: var(--aho-font-size-smedium);
 		margin: var(--aho-space-large) 0;
+		overflow-x: auto;
 		padding: var(--aho-space-large);
 	}
 
-	.token .keyword {
+	.token.language-svelte,
+	.token.language-javascript,
+	code.language-svelte,
+	code.language-javascript {
+		color: var(--aho-colors-code-punctuation);
+	}
+
+	.token.operator {
+		color: var(--aho-colors-code-punctuation);
+	}
+
+	.token.function {
+		color: var(--aho-colors-code-function);
+	}
+
+	.token.property {
+		color: var(--aho-colors-code-property);
+	}
+
+	.token.punctuation {
+		color: var(--aho-colors-code-punctuation);
+	}
+
+	.token.string {
+		color: var(--aho-colors-code-string);
+	}
+
+	.token.tag {
+		color: var(--aho-colors-code-tag);
+	}
+
+	.token.namespace,
+	.token.attr-name {
 		color: var(--aho-colors-code-attr);
 	}
 

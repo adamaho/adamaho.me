@@ -114,7 +114,7 @@
 		background-color: rgba(var(--aho-colors-background-site), 0.5);
 		height: 100%;
 		left: 0;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 4;

@@ -13,6 +13,7 @@
 	.writing-page {
 		position: relative;
 		opacity: 0.2;
+		padding-bottom: var(--aho-space-7xlarge);
 		transition: opacity var(--aho-animation-speed-fast) ease;
 		z-index: 3;
 	}

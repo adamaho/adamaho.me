@@ -5,6 +5,6 @@
 	export let language: 'svelte' | 'javascript' = 'javascript';
 </script>
 
-<Prism {language} source={code}>
+<Prism {language} source={code.trim()}>
 	<slot />
 </Prism>

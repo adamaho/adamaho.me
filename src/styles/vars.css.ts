@@ -55,10 +55,14 @@ export const theme = createGlobalThemeContract(
 			},
 			code: {
 				attr: '',
+				function: '',
 				keyword: '',
 				name: '',
 				property: '',
-				title: ''
+				punctuation: '',
+				string: '',
+				title: '',
+				tag: ''
 			},
 			gradients: {
 				brand: ''
@@ -95,11 +99,15 @@ createGlobalTheme('html[data-theme="dark"]', theme, {
 			subtle: `rgb(${baseVars.color.grey80})`
 		},
 		code: {
-			attr: `rgb(${baseVars.color.purple30})`,
+			attr: `rgb(${baseVars.color.yellow30})`,
+			function: `rgb(${baseVars.color.blue50})`,
 			keyword: `rgb(${baseVars.color.blue30})`,
 			name: `rgb(${baseVars.color.pink30})`,
-			property: `rgb(${baseVars.color.grey30})`,
-			title: `rgb(${baseVars.color.pink30})`
+			property: `rgb(${baseVars.color.pink30})`,
+			punctuation: `rgb(${baseVars.color.grey10})`,
+			string: `rgb(${baseVars.color.green30})`,
+			title: `rgb(${baseVars.color.pink30})`,
+			tag: `rgb(${baseVars.color.blue30})`
 		},
 		gradients: {
 			brand: `linear-gradient(
@@ -138,11 +146,15 @@ createGlobalTheme('html[data-theme="light"]', theme, {
 			subtle: `rgb(${baseVars.color.grey30})`
 		},
 		code: {
-			attr: `rgb(${baseVars.color.purple60})`,
+			attr: `rgb(${baseVars.color.orange60})`,
+			function: `rgb(${baseVars.color.blue50})`,
 			keyword: `rgb(${baseVars.color.blue60})`,
 			name: `rgb(${baseVars.color.pink60})`,
-			property: `rgb(${baseVars.color.grey90})`,
-			title: `rgb(${baseVars.color.pink60})`
+			property: `rgb(${baseVars.color.pink60})`,
+			punctuation: `rgb(${baseVars.color.grey90})`,
+			string: `rgb(${baseVars.color.green60})`,
+			title: `rgb(${baseVars.color.pink60})`,
+			tag: `rgb(${baseVars.color.blue60})`
 		},
 		gradients: {
 			brand: `linear-gradient(
