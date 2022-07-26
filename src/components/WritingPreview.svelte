@@ -10,15 +10,17 @@
 </script>
 
 <a class="writing-preview" {href}>
-	<p class="writing-preview-date">
-		{dayjs(date).format('MMMM DD, YYYY')}
-	</p>
-	<h2 class="writing-preview-title">
-		{title}
-	</h2>
-	<p class="writing-preview-snippet">
-		{snippet}
-	</p>
+	<div class="writing-preview-snippet-container">
+		<p class="writing-preview-date">
+			{dayjs(date).format('MMMM DD, YYYY')}
+		</p>
+		<h2 class="writing-preview-title">
+			{title}
+		</h2>
+		<p class="writing-preview-snippet">
+			{snippet}
+		</p>
+	</div>
 	<div class="writing-preview-read-more">
 		<span class="writing-preview-read-more-text">Read more</span>
 		<div class="writing-preview-read-more-icon">
@@ -34,7 +36,7 @@
 		border-radius: var(--aho-radii-large);
 		display: flex;
 		flex-direction: column;
-		gap: var(--aho-space-small);
+		gap: var(--aho-space-medium);
 		padding: var(--aho-space-smedium);
 		margin: 0 calc(var(--aho-space-smedium) * -1);
 		transition: transform var(--aho-animation-speed-medium) ease;
@@ -42,6 +44,12 @@
 
 	.writing-preview:hover {
 		transform: scale(var(--aho-scale-small));
+	}
+
+	.writing-preview-snippet-container {
+		display: flex;
+		flex-direction: column;
+		gap: var(--aho-space-xsmall);
 	}
 
 	.writing-preview-date {
@@ -55,6 +63,7 @@
 	}
 
 	.writing-preview-snippet {
+		font-weight: var(--aho-font-weight-thin);
 		margin: 0;
 		overflow: hidden;
 		display: -webkit-box;
