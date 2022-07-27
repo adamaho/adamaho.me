@@ -1,7 +1,7 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
 
-	import { ShieldCheck } from '~/lib/components/Icons';
+	import { ColorPalette, Flash, Sparkles, ShieldCheck } from '~/lib/components/Icons';
 
 	import Codeblock from '~/components/Codeblock.svelte';
 	import PageHeading from '~/components/PageHeading.svelte';
@@ -90,9 +90,8 @@
 	Vanilla-extract provides a function called <a
 		href="https://vanilla-extract.style/documentation/styling-api/#globalstyle">globalStyle</a
 	>
-	that allows us to create a style that lives in the global style sheet that targets any selector we
-	choose. We can use <code class="inline">globalStyle</code> to dynamically generate type-safe atomic
-	css classes.
+	that allows us to create a style that lives in the style sheet that targets any selector we choose.
+	We can use <code class="inline">globalStyle</code> to dynamically generate type-safe atomic css classes.
 </p>
 
 <p>
@@ -166,8 +165,8 @@
 <h2>Level Up</h2>
 
 <p>
-	So are your going to take the plunge and level up your atomic css? Harness typescript and
-	vanilla-extract to make your next project or design system special.
+	So are your going to take the plunge and level up your atomic css to make your next project or
+	design system special.
 </p>
 
 <HighlightCardGroup>
@@ -180,9 +179,31 @@
 	</HighlightCard>
 	<HighlightCard>
 		<svelte:fragment slot="icon">
-			<ShieldCheck />
+			<ColorPalette />
 		</svelte:fragment>
-		<svelte:fragment slot="title">Type-Safe</svelte:fragment>
-		Harness the power of typescript to drive consistency in your app or design system.
+		<svelte:fragment slot="title">Deeply Customizable</svelte:fragment>
+		Attatch any styles you want to a utility class to achieve a beautiful design or provide a specific
+		style.
+	</HighlightCard>
+	<HighlightCard>
+		<svelte:fragment slot="icon">
+			<Flash />
+		</svelte:fragment>
+		<svelte:fragment slot="title">Blazing Fast</svelte:fragment>
+		Develop new components with a consistent look and feel at warp speed with atomic css.
+	</HighlightCard>
+	<HighlightCard>
+		<svelte:fragment slot="icon">
+			<Sparkles />
+		</svelte:fragment>
+		<svelte:fragment slot="title">Framework Agnostic</svelte:fragment>
+		Whether its React, Svelte, Solid, etc. vanilla extract will be ready for you and your atomic
+		css.
 	</HighlightCard>
 </HighlightCardGroup>
+
+<p>
+	So that's it! If you made it all the way to the end. I appreciate you. For a more in-depth
+	example please head on over to my <a href="https://github.com/adamaho">github</a>. See you next
+	time 😀
+</p>
