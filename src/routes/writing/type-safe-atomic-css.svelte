@@ -1,8 +1,12 @@
 <script lang="ts">
 	import dayjs from 'dayjs';
 
+	import { ShieldCheck } from '~/lib/components/Icons';
+
 	import Codeblock from '~/components/Codeblock.svelte';
 	import PageHeading from '~/components/PageHeading.svelte';
+	import HighlightCardGroup from '~/components/HighlightCardGroup.svelte';
+	import HighlightCard from '~/components/HighlightCard.svelte';
 
 	import { snippets } from '~/snippets/writing/type-safe-atomic-css';
 </script>
@@ -159,9 +163,26 @@
 
 <hr class="separator" />
 
-<h2>The Good and the Bad</h2>
+<h2>Level Up</h2>
 
 <p>
-	As with any solution there are always pros and cons and it is important to understand the use
-	case for your users.
+	So are your going to take the plunge and level up your atomic css? Harness typescript and
+	vanilla-extract to make your next project or design system special.
 </p>
+
+<HighlightCardGroup>
+	<HighlightCard>
+		<svelte:fragment slot="icon">
+			<ShieldCheck />
+		</svelte:fragment>
+		<svelte:fragment slot="title">Type-Safe</svelte:fragment>
+		Harness the power of typescript to drive consistency in your app or design system.
+	</HighlightCard>
+	<HighlightCard>
+		<svelte:fragment slot="icon">
+			<ShieldCheck />
+		</svelte:fragment>
+		<svelte:fragment slot="title">Type-Safe</svelte:fragment>
+		Harness the power of typescript to drive consistency in your app or design system.
+	</HighlightCard>
+</HighlightCardGroup>

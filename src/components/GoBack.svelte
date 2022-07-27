@@ -37,4 +37,9 @@
 		height: var(--aho-space-medium);
 		width: var(--aho-space-medium);
 	}
+
+	:global(.go-back-icon > svg) {
+		height: 100%;
+		width: 100%;
+	}
 </style>
