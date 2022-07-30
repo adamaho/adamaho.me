@@ -9,7 +9,7 @@
 </script>
 
 <input bind:checked type="checkbox" {id} class="switch-input" />
-<label class="switch-toggle" for={id}>
+<label class="switch-toggle" for={id} aria-label={checked ? 'Toggle off' : 'Toggle on'}>
 	<div class="switch-thumb" />
 </label>
 
