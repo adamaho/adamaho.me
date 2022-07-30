@@ -6,7 +6,7 @@
 
 <BottomSheetTrigger>
 	<div class="nav-trigger" in:fly={{ y: 50 }}>
-		<button class="nav-trigger-button" on:click>
+		<button class="nav-trigger-button" on:click aria-label="Open Navigation Menu">
 			<svelte:component this={Menu} />
 		</button>
 	</div>
