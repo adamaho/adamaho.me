@@ -69,6 +69,10 @@
 		margin-top: var(--aho-space-5xlarge);
 	}
 
+	h3 {
+		margin-top: var(--aho-space-2xlarge);
+	}
+
 	p,
 	span {
 		color: var(--aho-colors-text-default);

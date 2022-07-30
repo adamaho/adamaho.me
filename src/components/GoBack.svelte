@@ -16,7 +16,7 @@
 		align-items: center;
 		border-bottom: none;
 		display: inline-flex;
-		gap: var(--aho-space-small);
+		gap: var(--aho-space-xsmall);
 		margin-bottom: var(--aho-space-small);
 		opacity: 0.7;
 	}

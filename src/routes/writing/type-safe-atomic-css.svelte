@@ -13,7 +13,7 @@
 
 <PageHeading title="Type-Safe Atomic CSS" goBackConfig={{ href: '/writing' }}>
 	<svelte:fragment slot="description">
-		{dayjs(new Date(2022, 6, 24)).format('MMMM DD, YYYY')}
+		{dayjs(new Date(2022, 6, 29)).format('MMMM DD, YYYY')}
 	</svelte:fragment>
 </PageHeading>
 
@@ -202,8 +202,38 @@
 	</HighlightCard>
 </HighlightCardGroup>
 
+<h2>Potential Improvements</h2>
+
+<p>
+	As with any solution there are tradeoffs. This solution is no exception. There are a couple
+	things that I haven't quite worked through yet.
+</p>
+
+<h3>Variants</h3>
+
+<p>
+	Variants are an important part of providing a complete styling solution. In this case I am
+	referring to modifiers like <code class="inline">:hover</code>,
+	<code class="inline">:active</code>, <code class="inline">:focus</code>, etc. Tailwind takes an
+	interesting approach of adding a suffix to a class name to provide a modifier. Something like
+	<code class="inline">focus:bg-blue-8</code> is an interesting approach. It would be fun to play around
+	with a couple solutions to this. I imagine it could be pretty easy to implement, but ensure the typescript
+	types work might be tricky.
+</p>
+
+<h3>Purging CSS</h3>
+
+<p>
+	Currently, vanilla-extracts sprinkles do not support purging. Since this approach is more
+	similar to how tailwind works, I am hypothesizing that using purge css could be a good approach
+	to reducing the css bundle size. Would be neat to play around with that to see if I can get it
+	working.
+</p>
+
 <p>
 	So that's it! If you made it all the way to the end. I appreciate you. For a more in-depth
-	example please head on over to my <a href="https://github.com/adamaho">github</a>. See you next
-	time 😀
+	example please head on over to my <a
+		href="https://github.com/adamaho/adamaho.me-examples/tree/main/examples/type-safe-atomic-css"
+		>github</a
+	>. See you next time 😀
 </p>
