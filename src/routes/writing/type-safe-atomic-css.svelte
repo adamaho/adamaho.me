@@ -165,7 +165,7 @@
 <h2>Level Up</h2>
 
 <p>
-	So are your going to take the plunge and level up your atomic css to make your next project or
+	Are your going to take the plunge and level up your atomic css to make your next project or
 	design system special.
 </p>
 
@@ -215,18 +215,18 @@
 	Variants are an important part of providing a complete styling solution. In this case I am
 	referring to modifiers like <code class="inline">:hover</code>,
 	<code class="inline">:active</code>, <code class="inline">:focus</code>, etc. Tailwind takes an
-	interesting approach of adding a suffix to a class name to provide a modifier. Something like
+	interesting approach of adding a prefix to a class name to provide a modifier. Something like
 	<code class="inline">focus:bg-blue-8</code> is an interesting approach. It would be fun to play around
-	with a couple solutions to this. I imagine it could be pretty easy to implement, but ensure the typescript
-	types work might be tricky.
+	with a couple solutions to this. I imagine it could be pretty easy to implement, but getting the
+	typescript types working might be tricky.
 </p>
 
 <h3>Purging CSS</h3>
 
 <p>
-	Currently, vanilla-extracts sprinkles do not support purging. Since this approach is more
-	similar to how tailwind works, I am hypothesizing that using purge css could be a good approach
-	to reducing the css bundle size. Would be neat to play around with that to see if I can get it
+	Currently, vanilla-extract sprinkles do not support purging. Since this approach is more similar
+	to how tailwind works, I am hypothesizing that using purge css could be a good approach to
+	reducing the css bundle size. Would be neat to play around with that to see if I can get it
 	working.
 </p>
 
