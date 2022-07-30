@@ -20,6 +20,10 @@
 		padding: var(--aho-space-large);
 	}
 
+	.highlight-card-title {
+		margin-top: 0;
+	}
+
 	.highlight-card-header {
 		align-items: center;
 		display: flex;
