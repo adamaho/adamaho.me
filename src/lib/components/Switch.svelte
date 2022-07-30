@@ -31,6 +31,10 @@
 		width: var(--aho-space-4xlarge);
 	}
 
+	.switch-toggle:focus {
+		box-shadow: 0 0 0 var(--aho-border-width-3) rgb(var(--aho-colors-brand-secondary));
+	}
+
 	.switch-toggle:hover {
 		transform: scale(var(--aho-scale-large));
 	}

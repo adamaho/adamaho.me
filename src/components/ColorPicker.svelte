@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { ColorVars } from '~/stores/theme';
 
-	export let colors: string[];
+	export let colors: { color: string; name: string }[];
 	export let cssVar: string;
 	export let defaultColor: string;
 	export let name: keyof typeof ColorVars;
@@ -43,20 +43,22 @@
 	<form>
 		<div class="color-picker-items">
 			{#each colors as color}
-				<label>
-					<input
-						type="radio"
-						value={color}
-						bind:group={value}
-						{name}
-						class="color-input"
-					/>
-					<div
-						bind:this={colorEls[color]}
-						style={`background-color: rgb(var(${color}))`}
-						class="color-bubble"
-					/>
+				<label for={color.name} class="color-picker-items-label">
+					{color.name}
 				</label>
+				<input
+					id={color.name}
+					type="radio"
+					value={color.color}
+					bind:group={value}
+					{name}
+					class="color-input"
+				/>
+				<div
+					bind:this={colorEls[color.color]}
+					style={`background-color: rgb(var(${color.color}))`}
+					class="color-bubble"
+				/>
 			{/each}
 		</div>
 	</form>
@@ -75,6 +77,12 @@
 		align-items: center;
 		display: flex;
 		gap: var(--aho-space-medium);
+	}
+
+	.color-picker-items-label {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
 	}
 
 	.color-input {

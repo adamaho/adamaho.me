@@ -21,7 +21,7 @@
 	<svelte:fragment slot="description">Manage your preferences</svelte:fragment>
 </PageHeading>
 
-<h3 class="preference-page-title">Theme</h3>
+<h2 class="preference-page-title">Theme</h2>
 
 <Preference>
 	<svelte:fragment slot="title">Dark Mode</svelte:fragment>
@@ -39,13 +39,34 @@
 		cssVar="--aho-colors-brand-primary"
 		name="Primary"
 		colors={[
-			'--aho-color-red40',
-			'--aho-color-orange40',
-			'--aho-color-yellow40',
-			'--aho-color-green40',
-			'--aho-color-blue40',
-			'--aho-color-purple40',
-			'--aho-color-pink40'
+			{
+				color: '--aho-color-red40',
+				name: 'primary red'
+			},
+			{
+				color: '--aho-color-orange40',
+				name: 'primary orange'
+			},
+			{
+				color: '--aho-color-yellow40',
+				name: 'primary yellow'
+			},
+			{
+				color: '--aho-color-green40',
+				name: 'primary green'
+			},
+			{
+				color: '--aho-color-blue40',
+				name: 'primary blue'
+			},
+			{
+				color: '--aho-color-purple40',
+				name: 'primary purple'
+			},
+			{
+				color: '--aho-color-pink40',
+				name: 'primary pink'
+			}
 		]}
 	/>
 </Preference>
@@ -58,13 +79,34 @@
 		cssVar="--aho-colors-brand-secondary"
 		name="Secondary"
 		colors={[
-			'--aho-color-red50',
-			'--aho-color-orange50',
-			'--aho-color-yellow50',
-			'--aho-color-green50',
-			'--aho-color-blue50',
-			'--aho-color-purple50',
-			'--aho-color-pink50'
+			{
+				color: '--aho-color-red50',
+				name: 'secondary red'
+			},
+			{
+				color: '--aho-color-orange50',
+				name: 'secondary orange'
+			},
+			{
+				color: '--aho-color-yellow50',
+				name: 'secondary yellow'
+			},
+			{
+				color: '--aho-color-green50',
+				name: 'secondary green'
+			},
+			{
+				color: '--aho-color-blue50',
+				name: 'secondary blue'
+			},
+			{
+				color: '--aho-color-purple50',
+				name: 'secondary purple'
+			},
+			{
+				color: '--aho-color-pink50',
+				name: 'secondary pink'
+			}
 		]}
 	/>
 </Preference>
