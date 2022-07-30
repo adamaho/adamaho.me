@@ -43,22 +43,21 @@
 	<form>
 		<div class="color-picker-items">
 			{#each colors as color}
-				<label for={color.name} class="color-picker-items-label">
-					{color.name}
+				<label for={color.name} aria-label={color.name}>
+					<input
+						id={color.name}
+						type="radio"
+						value={color.color}
+						bind:group={value}
+						{name}
+						class="color-input"
+					/>
+					<div
+						bind:this={colorEls[color.color]}
+						style={`background-color: rgb(var(${color.color}))`}
+						class="color-bubble"
+					/>
 				</label>
-				<input
-					id={color.name}
-					type="radio"
-					value={color.color}
-					bind:group={value}
-					{name}
-					class="color-input"
-				/>
-				<div
-					bind:this={colorEls[color.color]}
-					style={`background-color: rgb(var(${color.color}))`}
-					class="color-bubble"
-				/>
 			{/each}
 		</div>
 	</form>
@@ -77,12 +76,6 @@
 		align-items: center;
 		display: flex;
 		gap: var(--aho-space-medium);
-	}
-
-	.color-picker-items-label {
-		position: absolute;
-		top: -9999px;
-		left: -9999px;
 	}
 
 	.color-input {
