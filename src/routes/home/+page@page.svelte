@@ -11,12 +11,7 @@
 	Previously at <a href="https://ottomotors.com" target="_blank">OTTO Motors</a>.
 </p>
 
-<p class="shpeel">
-	Playing around with rust and react-native while working on <a
-		href="https://apps.apple.com/lv/app/tallii/id1602920349"
-		target="_blank">Tallii</a
-	>.
-</p>
+<p class="shpeel">Learning as much as I can about rust for the forseeable future.</p>
 
 <style>
 	.shpeel {
