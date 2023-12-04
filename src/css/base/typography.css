@@ -1,0 +1,128 @@
+@layer base {
+  :root {
+    --aho-font-size-1: 12px;
+    --aho-font-size-2: 14px;
+    --aho-font-size-3: 16px;
+    --aho-font-size-4: 18px;
+    --aho-font-size-5: 20px;
+    --aho-font-size-6: 24px;
+    --aho-font-size-7: 28px;
+    --aho-font-size-8: 35px;
+    --aho-font-size-9: 60px;
+
+    --aho-font-weight-light: 300;
+    --aho-font-weight-normal: 400;
+    --aho-font-weight-medium: 500;
+    --aho-font-weight-bold: 700;
+    --aho-font-weight-extra-bold: 800;
+
+    --aho-line-height-1: 16px;
+    --aho-line-height-2: 20px;
+    --aho-line-height-3: 24px;
+    --aho-line-height-4: 26px;
+    --aho-line-height-5: 28px;
+    --aho-line-height-6: 30px;
+    --aho-line-height-7: 36px;
+    --aho-line-height-8: 40px;
+    --aho-line-height-9: 60px;
+  }
+
+  [aho-text] {
+    text-align: var(--aho-text-align, left);
+    font-family: var(--aho-text-font-family, var(--aho-font-family-1));
+    font-size: var(--aho-text-font-size, var(--aho-font-size-2));
+    font-weight: var(--aho-text-font-weight, var(--aho-font-weight-normal));
+
+    &[aho-text-align="left"] {
+      text-align: left;
+    }
+
+    &[aho-text-align="center"] {
+      text-align: center;
+    }
+
+    &[aho-text-align="right"] {
+      text-align: right;
+    }
+
+    &[aho-text-contrast="low"] {
+      color: var(--aho-accent-9);
+    }
+
+    &[aho-text-contrast="medium"] {
+      color: var(--aho-accent-11);
+    }
+
+    &[aho-text-contrast="high"] {
+      color: var(--aho-accent-12);
+    }
+
+    &[aho-text-family="sans"] {
+      font-family: var(--aho-font-family-sans);
+    }
+
+    &[aho-text-family="serif"] {
+      font-family: var(--aho-font-family-serif);
+    }
+
+    &[aho-text-family="mono"] {
+      font-family: var(--aho-font-family-mono);
+    }
+
+    &[aho-text-size="1"] {
+      --aho-text-font-size: var(--aho-font-size-1);
+    }
+
+    &[aho-text-size="2"] {
+      --aho-text-font-size: var(--aho-font-size-2);
+    }
+
+    &[aho-text-size="3"] {
+      --aho-text-font-size: var(--aho-font-size-3);
+    }
+
+    &[aho-text-size="4"] {
+      --aho-text-font-size: var(--aho-font-size-4);
+    }
+
+    &[aho-text-size="5"] {
+      --aho-text-font-size: var(--aho-font-size-5);
+    }
+
+    &[aho-text-size="6"] {
+      --aho-text-font-size: var(--aho-font-size-6);
+    }
+
+    &[aho-text-size="7"] {
+      --aho-text-font-size: var(--aho-font-size-7);
+    }
+
+    &[aho-text-size="8"] {
+      --aho-text-font-size: var(--aho-font-size-8);
+    }
+
+    &[aho-text-size="9"] {
+      --aho-text-font-size: var(--aho-font-size-9);
+    }
+
+    &[aho-text-weight="light"] {
+      --aho-text-font-weight: var(--aho-font-weight-light);
+    }
+
+    &[aho-text-weight="normal"] {
+      --aho-text-font-weight: var(--aho-font-weight-normal);
+    }
+
+    &[aho-text-weight="medium"] {
+      --aho-text-font-weight: var(--aho-font-weight-medium);
+    }
+
+    &[aho-text-weight="bold"] {
+      --aho-text-font-weight: var(--aho-font-weight-bold);
+    }
+
+    &[aho-text-weight="extra-bold"] {
+      --aho-text-font-weight: var(--aho-font-weight-extra-bold);
+    }
+  }
+}

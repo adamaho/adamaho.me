@@ -1,0 +1,125 @@
+@import "@radix-ui/colors/sand.css";
+@import "@radix-ui/colors/sand-alpha.css";
+@import "@radix-ui/colors/sand-dark.css";
+@import "@radix-ui/colors/sand-dark-alpha.css";
+
+@import "@radix-ui/colors/orange.css";
+@import "@radix-ui/colors/orange-alpha.css";
+@import "@radix-ui/colors/orange-dark.css";
+@import "@radix-ui/colors/orange-dark-alpha.css";
+
+@layer base {
+  :root {
+    --aho-gray-1: var(--sand-1);
+    --aho-gray-2: var(--sand-2);
+    --aho-gray-3: var(--sand-3);
+    --aho-gray-4: var(--sand-4);
+    --aho-gray-5: var(--sand-5);
+    --aho-gray-6: var(--sand-6);
+    --aho-gray-7: var(--sand-7);
+    --aho-gray-8: var(--sand-8);
+    --aho-gray-9: var(--sand-9);
+    --aho-gray-10: var(--sand-10);
+    --aho-gray-11: var(--sand-11);
+    --aho-gray-12: var(--sand-12);
+
+    --aho-gray-a1: var(--sand-a1);
+    --aho-gray-a2: var(--sand-a2);
+    --aho-gray-a3: var(--sand-a3);
+    --aho-gray-a4: var(--sand-a4);
+    --aho-gray-a5: var(--sand-a5);
+    --aho-gray-a6: var(--sand-a6);
+    --aho-gray-a7: var(--sand-a7);
+    --aho-gray-a8: var(--sand-a8);
+    --aho-gray-a9: var(--sand-a9);
+    --aho-gray-a10: var(--sand-a10);
+    --aho-gray-a11: var(--sand-a11);
+    --aho-gray-a12: var(--sand-a12);
+
+    --aho-orange-1: var(--orange-1);
+    --aho-orange-2: var(--orange-2);
+    --aho-orange-3: var(--orange-3);
+    --aho-orange-4: var(--orange-4);
+    --aho-orange-5: var(--orange-5);
+    --aho-orange-6: var(--orange-6);
+    --aho-orange-7: var(--orange-7);
+    --aho-orange-8: var(--orange-8);
+    --aho-orange-9: var(--orange-9);
+    --aho-orange-10: var(--orange-10);
+    --aho-orange-11: var(--orange-11);
+    --aho-orange-12: var(--orange-12);
+
+    --aho-orange-a1: var(--orange-a1);
+    --aho-orange-a2: var(--orange-a2);
+    --aho-orange-a3: var(--orange-a3);
+    --aho-orange-a4: var(--orange-a4);
+    --aho-orange-a5: var(--orange-a5);
+    --aho-orange-a6: var(--orange-a6);
+    --aho-orange-a7: var(--orange-a7);
+    --aho-orange-a8: var(--orange-a8);
+    --aho-orange-a9: var(--orange-a9);
+    --aho-orange-a10: var(--orange-a10);
+    --aho-orange-a11: var(--orange-a11);
+    --aho-orange-a12: var(--orange-a12);
+  }
+
+  :where(html) {
+    :where([aho-accent-color="gray"]) {
+      --aho-accent-1: var(--aho-gray-1);
+      --aho-accent-2: var(--aho-gray-2);
+      --aho-accent-3: var(--aho-gray-3);
+      --aho-accent-4: var(--aho-gray-4);
+      --aho-accent-5: var(--aho-gray-5);
+      --aho-accent-6: var(--aho-gray-6);
+      --aho-accent-7: var(--aho-gray-7);
+      --aho-accent-8: var(--aho-gray-8);
+      --aho-accent-9: var(--aho-gray-9);
+      --aho-accent-10: var(--aho-gray-10);
+      --aho-accent-11: var(--aho-gray-11);
+      --aho-accent-12: var(--aho-gray-12);
+
+      --aho-accent-a1: var(--aho-gray-a1);
+      --aho-accent-a2: var(--aho-gray-a2);
+      --aho-accent-a3: var(--aho-gray-a3);
+      --aho-accent-a4: var(--aho-gray-a4);
+      --aho-accent-a5: var(--aho-gray-a5);
+      --aho-accent-a6: var(--aho-gray-a6);
+      --aho-accent-a7: var(--aho-gray-a7);
+      --aho-accent-a8: var(--aho-gray-a8);
+      --aho-accent-a9: var(--aho-gray-a9);
+      --aho-accent-a10: var(--aho-gray-a10);
+      --aho-accent-a11: var(--aho-gray-a11);
+      --aho-accent-a12: var(--aho-gray-a12);
+    }
+  }
+
+  :where(html) {
+    :where([aho-accent-color="orange"]) {
+      --aho-accent-1: var(--aho-orange-1);
+      --aho-accent-2: var(--aho-orange-2);
+      --aho-accent-3: var(--aho-orange-3);
+      --aho-accent-4: var(--aho-orange-4);
+      --aho-accent-5: var(--aho-orange-5);
+      --aho-accent-6: var(--aho-orange-6);
+      --aho-accent-7: var(--aho-orange-7);
+      --aho-accent-8: var(--aho-orange-8);
+      --aho-accent-9: var(--aho-orange-9);
+      --aho-accent-10: var(--aho-orange-10);
+      --aho-accent-11: var(--aho-orange-11);
+      --aho-accent-12: var(--aho-orange-12);
+
+      --aho-accent-a1: var(--aho-orange-a1);
+      --aho-accent-a2: var(--aho-orange-a2);
+      --aho-accent-a3: var(--aho-orange-a3);
+      --aho-accent-a4: var(--aho-orange-a4);
+      --aho-accent-a5: var(--aho-orange-a5);
+      --aho-accent-a6: var(--aho-orange-a6);
+      --aho-accent-a7: var(--aho-orange-a7);
+      --aho-accent-a8: var(--aho-orange-a8);
+      --aho-accent-a9: var(--aho-orange-a9);
+      --aho-accent-a10: var(--aho-orange-a10);
+      --aho-accent-a11: var(--aho-orange-a11);
+      --aho-accent-a12: var(--aho-orange-a12);
+    }
+  }
+}

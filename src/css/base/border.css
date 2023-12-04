@@ -1,0 +1,7 @@
+@layer base {
+  :root {
+    --aho-border-width-1: 1px;
+    --aho-border-width-2: 2px;
+    --aho-border-width-3: 3px;
+  }
+}

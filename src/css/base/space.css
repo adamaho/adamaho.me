@@ -1,0 +1,13 @@
+@layer base {
+  :root {
+    --aho-space-1: 4px;
+    --aho-space-2: 8px;
+    --aho-space-3: 12px;
+    --aho-space-4: 16px;
+    --aho-space-5: 24px;
+    --aho-space-6: 32px;
+    --aho-space-7: 40px;
+    --aho-space-8: 48px;
+    --aho-space-9: 64px;
+  }
+}

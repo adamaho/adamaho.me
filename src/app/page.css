@@ -1,0 +1,221 @@
+.home {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+
+  .home-grid {
+    --grid-item-border-color: var(--aho-gray-5);
+    --grid-item-border-width: var(--aho-border-width-1);
+
+    display: grid;
+    grid-template-columns:
+      minmax(16px, 1fr)
+      minmax(auto, 70ch)
+      minmax(16px, 1fr);
+    grid-template-rows: 1fr 400px 1fr;
+    height: 100%;
+
+    .home-item {
+      border: var(--grid-item-border-width) solid transparent;
+
+      &:nth-child(2),
+      &:nth-child(8) {
+        border-left-color: var(--grid-item-border-color);
+        border-right-color: var(--grid-item-border-color);
+      }
+
+      &:nth-child(4),
+      &:nth-child(6) {
+        border-top-color: var(--grid-item-border-color);
+        border-bottom-color: var(--grid-item-border-color);
+      }
+
+      &:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        padding: var(--aho-space-3);
+      }
+
+      &:nth-child(5) {
+        border: var(--aho-border-width-1) solid var(--grid-item-border-color);
+        padding: var(--aho-space-3);
+
+        .home-card {
+          background-color: var(--aho-gray-2);
+          border: var(--aho-border-width-1) solid var(--aho-gray-4);
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .home-mask-vertical {
+    display: grid;
+    grid-template-rows: 1fr 1px 400px 1px 1fr;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .home-mask-top {
+    background: linear-gradient(to bottom, var(--aho-gray-1) 25%, transparent);
+  }
+
+  .home-laser {
+    --laser-size: 15%;
+    --laser-duration: 25s;
+    position: relative;
+  }
+
+  .home-laser::after {
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    content: "";
+    position: absolute;
+  }
+
+  .home-bottom-laser::after,
+  .home-top-laser::after {
+    height: 1px;
+    will-change: left;
+    width: var(--laser-size);
+  }
+
+  .home-top-laser::after {
+    animation-name: laser-top;
+    animation-duration: var(--laser-duration);
+    background: linear-gradient(to left, var(--aho-orange-9), transparent);
+    left: calc(-1 * var(--laser-size));
+    top: 1px;
+  }
+
+  .home-bottom-laser::after {
+    animation-name: laser-bottom;
+    animation-duration: var(--laser-duration);
+    background: linear-gradient(to right, var(--aho-orange-9), transparent);
+    left: 100%;
+    top: -1px;
+  }
+
+  .home-mask-bottom {
+    background: linear-gradient(to top, var(--aho-gray-1), transparent);
+  }
+
+  .home-mask-horizontal {
+    display: grid;
+    grid-template-columns:
+      minmax(16px, 1fr)
+      1px
+      minmax(auto, 70ch)
+      1px
+      minmax(16px, 1fr);
+    height: 100%;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .home-left-laser::after,
+  .home-right-laser::after {
+    height: var(--laser-size);
+    will-change: top;
+    width: 1px;
+  }
+
+  .home-left-laser::after {
+    animation-name: laser-left;
+    animation-duration: var(--laser-duration);
+    background: linear-gradient(to bottom, var(--aho-orange-9), transparent);
+    top: 100%;
+  }
+
+  .home-right-laser::after {
+    animation-name: laser-right;
+    animation-duration: var(--laser-duration);
+    background: linear-gradient(to top, var(--aho-orange-9), transparent);
+    top: calc(-1 * var(--laser-size));
+  }
+
+  .home-mask-left {
+    background: linear-gradient(to right, var(--aho-gray-1), transparent);
+  }
+
+  .home-mask-right {
+    background: linear-gradient(to left, var(--aho-gray-1), transparent);
+  }
+}
+
+@keyframes laser-top {
+  0% {
+    left: calc(-1 * var(--laser-size));
+  }
+  20% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes laser-bottom {
+  0% {
+    left: 100%;
+  }
+  20% {
+    left: 100%;
+  }
+  40% {
+    left: calc(-1 * var(--laser-size));
+  }
+  100% {
+    left: calc(-1 * var(--laser-size));
+  }
+}
+
+@keyframes laser-left {
+  0% {
+    top: 100%;
+  }
+  20% {
+    top: 100%;
+  }
+  40% {
+    top: 100%;
+  }
+  60% {
+    top: calc(-1 * var(--laser-size));
+  }
+  80% {
+    top: calc(-1 * var(--laser-size));
+  }
+  100% {
+    top: calc(-1 * var(--laser-size));
+  }
+}
+
+@keyframes laser-right {
+  0% {
+    top: calc(-1 * var(--laser-size));
+  }
+  20% {
+    top: calc(-1 * var(--laser-size));
+  }
+  40% {
+    top: calc(-1 * var(--laser-size));
+  }
+  60% {
+    top: calc(-1 * var(--laser-size));
+  }
+  80% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
+}
