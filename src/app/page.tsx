@@ -12,7 +12,9 @@ export default function Home() {
         <div className="home-item" />
         <div className="home-item" />
         <div className="home-item">
-          <div className="home-card" />
+          <div className="home-card">
+            <Text>Hello world</Text>
+          </div>
         </div>
         <div className="home-item" />
         <div className="home-item" />
