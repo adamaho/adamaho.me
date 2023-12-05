@@ -2,6 +2,8 @@ import { Github, Linkedin } from "lucide-react";
 
 import { Heading, Text } from "~/components";
 
+import stylex from "@stylexjs/stylex";
+
 import "./page.css";
 
 export default function Home() {
@@ -73,14 +75,20 @@ export default function Home() {
         </div>
         <div className="home-item" />
         <div className="home-item" />
-        <div className="home-item">
+        <div className="home-item home-item-center">
           <div className="home-card"></div>
         </div>
         <div className="home-item" />
         <div className="home-item" />
-        <div className="home-item"></div>
+        <div className={stylex(s.foo)}></div>
         <div className="home-item" />
       </div>
     </main>
   );
 }
+
+const s = stylex.create({
+  foo: {
+    background: "red",
+  },
+});

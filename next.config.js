@@ -1,4 +1,15 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const stylexPlugin = require("@stylexjs/nextjs-plugin");
 
-module.exports = nextConfig
+/** @type {import('next').NextConfig} */
+const nextConfig = {};
+
+const babelrc = require("./.babelrc.js");
+const plugins = babelrc.plugins;
+const [_name, options] = plugins.find(
+  (plugin) => Array.isArray(plugin) && plugin[0] === "@stylexjs/babel-plugin"
+);
+const rootDir = options.unstable_moduleResolution.rootDir ?? __dirname;
+
+module.exports = stylexPlugin({
+  rootDir,
+})(nextConfig);
