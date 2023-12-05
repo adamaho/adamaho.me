@@ -11,5 +11,5 @@ body {
   --aho-font-family-serif: var(--font-geist-mono);
   --aho-font-family-mono: var(--font-geist-mono);
 
-  background-color: var(--aho-gray-1);
+  background-color: var(--aho-color-grey-1);
 }

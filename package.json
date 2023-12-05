@@ -12,6 +12,7 @@
     "@radix-ui/colors": "^3.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "geist": "^1.2.0",
+    "lucide-react": "^0.294.0",
     "next": "14.0.3",
     "react": "^18",
     "react-dom": "^18"

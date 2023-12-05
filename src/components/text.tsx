@@ -15,7 +15,7 @@ type TextSpanProps = {
    *
    * @default "span"
    */
-  displayAs?: "span";
+  as?: "span";
 
   /**
    * rendered html attributes
@@ -33,7 +33,7 @@ type TextLabelProps = {
    *
    * @default "span"
    */
-  displayAs?: "label";
+  as?: "label";
 
   /**
    * rendered html attributes
@@ -51,7 +51,7 @@ type TextPProps = {
    *
    * @default "span"
    */
-  displayAs?: "p";
+  as?: "p";
 
   /**
    * rendered html attributes
@@ -69,7 +69,7 @@ type TextDivProps = {
    *
    * @default "span"
    */
-  displayAs?: "div";
+  as?: "div";
 
   /**
    * rendered html attributes
@@ -99,9 +99,9 @@ type SharedTextProps = {
   /**
    * modifies the color of the text
    *
-   * @default "gray"
+   * @default "grey"
    */
-  color?: "orange" | "gray";
+  color?: "orange" | "grey";
 
   /**
    * modifies the contrast of the text
@@ -139,11 +139,11 @@ const Text = forwardRef<TextElement, PropsWithChildren<TextProps>>(
   (
     {
       align = "left",
-      displayAs: Comp = "span",
+      as: Comp = "span",
       attributes,
       children,
       className,
-      color = "gray",
+      color = "grey",
       contrast = "high",
       family = "sans",
       size = "2",

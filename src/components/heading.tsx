@@ -34,14 +34,14 @@ type HeadingProps = {
    *
    * @default "span"
    */
-  displayAs?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+  as?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 
   /**
    * modifies the color of the heading
    *
-   * @default "gray"
+   * @default "grey"
    */
-  color?: "orange" | "gray";
+  color?: "orange" | "grey";
 
   /**
    * modifies the contrast of the heading
@@ -70,19 +70,27 @@ type HeadingProps = {
    * @default "6"
    */
   size?: "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9";
+
+  /**
+   * modifies the font weight of the heading
+   *
+   * @default "normal"
+   */
+  weight?: "light" | "normal" | "medium" | "bold" | "extra-bold";
 };
 
 const Heading = forwardRef<HeadingElement, PropsWithChildren<HeadingProps>>(
   (
     {
       align = "left",
-      displayAs: Comp = "h1",
+      as: Comp = "h1",
       attributes,
       children,
-      color = "gray",
+      color = "grey",
       contrast = "high",
       family = "sans",
       size = "7",
+      weight = "bold",
       ...rest
     },
     ref
@@ -98,7 +106,7 @@ const Heading = forwardRef<HeadingElement, PropsWithChildren<HeadingProps>>(
         aho-text-contrast={contrast}
         aho-text-family={family}
         aho-text-size={size}
-        aho-text-weight="normal"
+        aho-text-weight={weight}
         ref={ref}
       >
         <Comp>{children}</Comp>

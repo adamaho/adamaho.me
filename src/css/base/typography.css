@@ -46,15 +46,15 @@
     }
 
     &[aho-text-contrast="low"] {
-      color: var(--aho-accent-9);
+      color: var(--aho-color-accent-9);
     }
 
     &[aho-text-contrast="medium"] {
-      color: var(--aho-accent-11);
+      color: var(--aho-color-accent-11);
     }
 
     &[aho-text-contrast="high"] {
-      color: var(--aho-accent-12);
+      color: var(--aho-color-accent-12);
     }
 
     &[aho-text-family="sans"] {

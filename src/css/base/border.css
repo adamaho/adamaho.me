@@ -3,5 +3,14 @@
     --aho-border-width-1: 1px;
     --aho-border-width-2: 2px;
     --aho-border-width-3: 3px;
+
+    --aho-border-radius-1: 3px;
+    --aho-border-radius-2: 4px;
+    --aho-border-radius-3: 6px;
+    --aho-border-radius-4: 8px;
+    --aho-border-radius-5: 12px;
+    --aho-border-radius-6: 16px;
+    --aho-border-radius-7: 24px;
+    --aho-border-radius-round: 9999px;
   }
 }
