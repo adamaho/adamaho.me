@@ -1,0 +1,160 @@
+.home-laser-vertical {
+  display: grid;
+  grid-template-rows:
+    var(--grid-row-1)
+    1px
+    var(--grid-row-2)
+    1px
+    var(--grid-row-3);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.home-laser-horizontal {
+  display: grid;
+  grid-template-columns: var(--grid-column-1) 1px var(--grid-column-2) 1px var(
+      --grid-column-3
+    );
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.home-laser {
+  --laser-size: 15%;
+  --laser-duration: 25s;
+
+  background-color: var(--aho-color-grey-4);
+  position: relative;
+}
+
+.home-laser::after {
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  content: "";
+  position: absolute;
+}
+
+.home-bottom-laser::after,
+.home-top-laser::after {
+  height: 1px;
+  will-change: left;
+  width: var(--laser-size);
+}
+
+.home-top-laser::after {
+  animation-name: laser-top;
+  animation-duration: var(--laser-duration);
+  background: linear-gradient(to left, var(--aho-color-orange-9), transparent);
+  left: calc(-1 * var(--laser-size));
+  top: 1px;
+}
+
+.home-left-laser::after,
+.home-right-laser::after {
+  height: var(--laser-size);
+  will-change: top;
+  width: 1px;
+}
+
+.home-left-laser::after {
+  animation-name: laser-left;
+  animation-duration: var(--laser-duration);
+  background: linear-gradient(
+    to bottom,
+    var(--aho-color-orange-9),
+    transparent
+  );
+  left: 1px;
+  top: 100%;
+}
+
+.home-right-laser::after {
+  animation-name: laser-right;
+  animation-duration: var(--laser-duration);
+  background: linear-gradient(to top, var(--aho-color-orange-9), transparent);
+  left: -1px;
+  top: calc(-1 * var(--laser-size));
+}
+
+.home-bottom-laser::after {
+  animation-name: laser-bottom;
+  animation-duration: var(--laser-duration);
+  background: linear-gradient(to right, var(--aho-color-orange-9), transparent);
+  left: 100%;
+  top: -1px;
+}
+
+@keyframes laser-top {
+  0% {
+    left: calc(-1 * var(--laser-size));
+  }
+  20% {
+    left: 100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes laser-bottom {
+  0% {
+    left: 100%;
+  }
+  20% {
+    left: 100%;
+  }
+  40% {
+    left: calc(-1 * var(--laser-size));
+  }
+  100% {
+    left: calc(-1 * var(--laser-size));
+  }
+}
+
+@keyframes laser-left {
+  0% {
+    top: 100%;
+  }
+  20% {
+    top: 100%;
+  }
+  40% {
+    top: 100%;
+  }
+  60% {
+    top: calc(-1 * var(--laser-size));
+  }
+  80% {
+    top: calc(-1 * var(--laser-size));
+  }
+  100% {
+    top: calc(-1 * var(--laser-size));
+  }
+}
+
+@keyframes laser-right {
+  0% {
+    top: calc(-1 * var(--laser-size));
+  }
+  20% {
+    top: calc(-1 * var(--laser-size));
+  }
+  40% {
+    top: calc(-1 * var(--laser-size));
+  }
+  60% {
+    top: calc(-1 * var(--laser-size));
+  }
+  80% {
+    top: 100%;
+  }
+  100% {
+    top: 100%;
+  }
+}

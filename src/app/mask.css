@@ -1,0 +1,44 @@
+.home-mask-vertical {
+  display: grid;
+  grid-template-rows:
+    var(--grid-row-1)
+    var(--grid-row-2)
+    var(--grid-row-3);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .home-mask-top {
+    background: linear-gradient(to top, transparent, var(--aho-color-grey-1));
+  }
+
+  .home-mask-bottom {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--aho-color-grey-1)
+    );
+  }
+}
+
+.home-mask-horizontal {
+  display: grid;
+  grid-template-columns: var(--grid-column-1) var(--grid-column-2) var(
+      --grid-column-3
+    );
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  .home-mask-left {
+    background: linear-gradient(to left, transparent, var(--aho-color-grey-1));
+  }
+
+  .home-mask-right {
+    background: linear-gradient(to right, transparent, var(--aho-color-grey-1));
+  }
+}

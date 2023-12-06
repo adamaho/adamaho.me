@@ -2,37 +2,16 @@ import { Github, Linkedin } from "lucide-react";
 
 import { Heading, Text } from "~/components";
 
-import stylex from "@stylexjs/stylex";
+import { Lasers } from "./lasers";
+import { Mask } from "./mask";
 
 import "./page.css";
 
 export default function Home() {
   return (
     <main className="home">
-      <div className="home-laser-vertical">
-        <div />
-        <div className="home-laser home-top-laser" />
-        <div />
-        <div className="home-laser home-bottom-laser" />
-        <div />
-      </div>
-      <div className="home-laser-horizontal">
-        <div />
-        <div className="home-laser home-left-laser" />
-        <div />
-        <div className="home-laser home-right-laser" />
-        <div />
-      </div>
-      <div className="home-mask-vertical">
-        <div className="home-mask-top" />
-        <div />
-        <div className="home-mask-bottom" />
-      </div>
-      <div className="home-mask-horizontal">
-        <div className="home-mask-left" />
-        <div />
-        <div className="home-mask-right" />
-      </div>
+      <Lasers />
+      <Mask />
       <div className="home-grid">
         <div className="home-item" />
         <div className="home-item">
@@ -73,22 +52,18 @@ export default function Home() {
             </div>
           </header>
         </div>
-        <div className="home-item" />
-        <div className="home-item" />
+        <div />
+        <div />
         <div className="home-item home-item-center">
-          <div className="home-card"></div>
+          <div className="home-card">
+            <Text size="4">Some words hereeeeee</Text>
+          </div>
         </div>
-        <div className="home-item" />
-        <div className="home-item" />
-        <div className={stylex(s.foo)}></div>
-        <div className="home-item" />
+        <div />
+        <div />
+        <div></div>
+        <div />
       </div>
     </main>
   );
 }
-
-const s = stylex.create({
-  foo: {
-    background: "red",
-  },
-});
