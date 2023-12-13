@@ -13,14 +13,14 @@ export default function Home() {
       <Lasers />
       <Mask />
       <div className="home-grid">
-        <div className="home-item" />
+        <div />
         <div className="home-item">
-          <header className="home-header">
+          <header className="home-item home-header">
             <div className="home-header-info">
-              <Heading size="8" weight="medium">
+              <Heading size="6" weight="medium">
                 Adam Aho
               </Heading>
-              <Text color="grey" contrast="low" family="mono">
+              <Text color="grey" contrast="low" size="3">
                 Senior Software Developer
               </Text>
             </div>
@@ -55,14 +55,16 @@ export default function Home() {
         <div />
         <div />
         <div className="home-item home-item-center">
-          <div className="home-card">
-            <Text size="4">Some words hereeeeee</Text>
-          </div>
+          <Heading as="h2" size="3" weight="normal">
+            About me
+          </Heading>
+          <Text as="p" contrast="low" size="3">
+            Passionate about crafting interfaces
+          </Text>
+          <Text as="p" size="3" contrast="low">
+            Experimenting with rust and realtime interfaces
+          </Text>
         </div>
-        <div />
-        <div />
-        <div></div>
-        <div />
       </div>
     </main>
   );

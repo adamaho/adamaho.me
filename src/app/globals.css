@@ -11,5 +11,13 @@ body {
   --aho-font-family-serif: var(--font-geist-mono);
   --aho-font-family-mono: var(--font-geist-mono);
 
+  --grid-column-1: minmax(16px, 1fr);
+  --grid-column-2: minmax(auto, 90ch);
+  --grid-column-3: minmax(16px, 1fr);
+  --grid-row-1: 200px;
+  --grid-row-2: 400px;
+  --grid-item-border-color: var(--aho-color-grey-5);
+  --grid-item-border-width: var(--aho-border-width-1);
+
   background-color: var(--aho-color-grey-1);
 }
